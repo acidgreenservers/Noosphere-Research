@@ -15,7 +15,7 @@ import UnifiedQuantumTheory from './pages/papers/fringe/UnifiedQuantumTheory'
 
 export default function App() {
     return (
-        <Router basename="/the-lucid-engine">
+        <Router basename="/Noosphere-Research">
             <StarfieldLayout>
                 <Routes>
                     <Route path="/" element={<Home />} />

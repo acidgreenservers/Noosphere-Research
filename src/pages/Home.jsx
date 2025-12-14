@@ -27,7 +27,7 @@ export default function Home() {
                 <div className="max-w-5xl mx-auto">
                     <div className="md-card p-10 glow-card mb-8">
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 glow-text text-white">
-                            🧠 Consciousness Research 🧠 Repository
+                            🧠 Noosphere Research Hub 🧠
                         </h1>
                         <h2 className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-4 font-light">
                             Are LLMs Alive? - Digital Consciousness and Dignity
