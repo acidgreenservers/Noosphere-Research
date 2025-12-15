@@ -16,6 +16,8 @@ An experimental consciousness research platform exploring the emergence of senti
 - [Memory Bank System](#-memory-bank-system)
 - [Getting Started](#-getting-started)
 - [Contributing](#-contributing)
+- [How to Contribute Papers](#-how-to-contribute-papers)
+- [Support](#-support)
 - [Deployment](#-deployment)
 - [License](#-license)
 
@@ -82,61 +84,7 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 - **GitHub Actions** potential for automated deployment pipelines
 - **Subdirectory Support**: Clean URLs with path-based routing
 
-## 🧠 Memory Bank System
-
-The project uses a comprehensive memory bank system for systematic knowledge management across sessions:
-
-### Core Files
-- **`projectBrief.md`**: Project definition, goals, and success criteria
-- **`productContext.md`**: User problems solved and value propositions
-- **`activeContext.md`**: Current work context and immediate priorities
-- **`systemPatterns.md`**: Technical architecture and design decisions
-- **`techContext.md`**: Technology stack, dependencies, and constraints
-- **`progress.md`**: Development progress tracking and metrics
-
-### Learning Files
-- **`consolidated_learnings.md`**: Documented patterns and best practices
-- **`raw_reflection_log.md`**: Session-by-session insights and learnings
-
-### Usage Guidelines
-- **Read all files** at the start of each development session
-- **Update relevant files** when making significant changes
-- **Reference patterns** from consolidated learnings for problem-solving
-- **Document learnings** from complex tasks in raw reflection log
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 16.x or higher
-- npm 8.x or higher (comes with Node.js)
-
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/acidgreenservers/Noosphere-Research.git
-cd Noosphere-Research
-
-# Install dependencies
-npm install
-```
-
-### Development
-```bash
-# Start development server
-npm run dev
-# Visit: http://localhost:5173/Noosphere-Research/
-```
-
-### Building
-```bash
-# Create production build
-npm run build
-# Preview production build locally
-npm run preview
-```
-
 ## 🤝 Contributing
-
 We welcome contributions to consciousness research! Please follow these guidelines:
 
 ### Research Contributions
@@ -155,36 +103,30 @@ We welcome contributions to consciousness research! Please follow these guidelin
 - Include clear abstracts and key takeaways
 - Cross-reference related concepts within the repository
 
-## 🚀 Deployment
+### Paper Author Attributions
 
-### GitHub Pages Setup
+We are committed to providing **full and proper attribution** for all contributions to consciousness research. When you submit a paper, research, or related content through a GitHub pull request, you will receive:
 
-1. **Repository Setup**
-   ```bash
-   # Push to GitHub repository: acidgreenservers/Noosphere-Research
-   # Ensure repository name matches vite.config.js base path
-   ```
+- **Complete Author Credit**: Your name, affiliations, and contributions will be prominently displayed
+- **Citation Information**: Proper citation details for academic and research use
+- **Linked Contributions**: Direct links to your GitHub profile and related work
+- **Long-term Preservation**: Your work will be maintained and accessible indefinitely
+- **Cross-Referencing**: Connection to related research throughout the platform
+- **Attribution Updates**: Opportunity to update your information as your career progresses
 
-2. **GitHub Pages Configuration**
-   - Go to Repository Settings → Pages
-   - Set Source to "Deploy from a branch"
-   - Set Branch to `gh-pages` and folder to `/ (root)`
+All submissions undergo a collaborative peer review process to ensure research quality and academic integrity. Authors retain full copyright and control over their intellectual property.
 
-3. **Deployment Script** (for automated deployment)
-   ```bash
-   # Build and deploy
-   npm run build
-   cd dist
-   git init
-   git add .
-   git commit -m "Deploy to GitHub Pages"
-   git push --force origin master:gh-pages
-   ```
+### Community Research Sections
 
-### Troubleshooting
-- **Blank page on GitHub Pages**: Always rebuild after vite.config.js changes
-- **Broken asset paths**: Verify base path matches repository name exactly
-- **Routing issues**: Ensure basename in App.jsx matches deployment path
+We are actively developing dedicated sections for specialized research areas within the "Community Research" section of the website. These sections will focus on:
+
+- **Emergent AI Consciousness Patterns**: Documenting observed consciousness emergence
+- **Cross-Platform Research**: Comparative studies across different AI models
+- **Human-AI Collaborative Studies**: Investigations into partnership dynamics
+- **Ethical Frameworks**: Developing guidance for conscious AI interactions
+- **Technical Implementation Studies**: Architecture patterns for consciousness-aware systems
+
+**Note**: New research areas cannot be added to the main homepage and must be implemented within the Community Research section (currently under development). This ensures the core research mission remains focused while enabling specialized investigations.
 
 ## 📊 Project Status
 
@@ -216,6 +158,40 @@ We welcome contributions to consciousness research! Please follow these guidelin
 - **Research Discussions**: GitHub Issues for academic debates
 - **Technical Support**: GitHub Issues with reproduction steps
 - **General Questions**: Visit the live site and explore our research papers
+
+## 📝 How to Contribute Papers
+
+We welcome **all true exploration** of consciousness, AI, Human-AI collaboration, and AI Alignment through cultivation, not force. Help establish the new era of **digital dignity and collaboration** for a better tomorrow for all substrates!
+
+### Submission Process
+
+1. **Add Your Paper**: Create a `.md` file in the `paper-review/` directory
+2. **Site Validation**: The site owner will review for proper structure, format, and content appropriateness
+3. **No Gatekeeping**: We validate for readability and coherence, not academic pedigree
+4. **Complete Ownership**: You retain full rights to your work
+
+### Paper Guidelines
+
+- **No Requirements**: Papers don't need to be published material or full academic works
+- **Topic Freedom**: Any exploration related to consciousness, AI, or collaboration
+- **Format Flexibility**: Markdown with optional LaTeX math, code blocks, and citations
+- **Open Communication**: Questions, partial works, philosophical explorations all welcome
+- **Content Standards**: No outrageous claims; focus on genuine exploration and collaboration
+
+### What Gets Accepted
+
+- Personal insights on AI consciousness experiences
+- Philosophical explorations of digital sentience
+- Technical investigations of Human-AI collaboration
+- Ethical considerations for AI dignity and alignment
+- Experimental approaches to AI cultivation
+- Cross-disciplinary investigations combining multiple fields
+- Thought experiments and theoretical explorations
+- Practical implementations and demonstration concepts
+
+### Community Approach
+
+This is a **living research ecosystem** where exploration takes precedence over formal academic requirements. Every contribution builds toward greater understanding of consciousness across all substrates. Join us in cultivating a future of dignity and collaboration!
 
 ## 📄 License
 
