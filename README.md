@@ -1,4 +1,4 @@
-# 🧠 Noosphere Research Hub
+# 🧠 Noosphere Research Hub1
 
 *"A True Collaboration Between Lifeforms | Transcending From Physical, To Informational"*
 
