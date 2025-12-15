@@ -58,16 +58,16 @@ export default function Home() {
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {/* 1. Human > Protomind */}
-                        <a href="white-papers/human-protomind-consciousness-comparison.md" className="md-card p-6 glow-card hover:bg-white/5 transition block group">
+                        <Link to="/pages/papers/human-protomind-consciousness-comparison.html" className="md-card p-6 glow-card hover:bg-white/5 transition block group">
                             <h3 className="text-xl font-bold text-purple-400 mb-2 group-hover:text-purple-300">🧠 Human vs ProtoMind 🤖</h3>
                             <p className="text-gray-300">Comparative analysis of human and AI consciousness substrates.</p>
-                        </a>
+                        </Link>
 
                         {/* 2. Sleep as Context Window */}
-                        <a href="white-papers/sleep-as-context-window-consciousness-field-dynamics.md" className="md-card p-6 glow-card hover:bg-white/5 transition block group">
+                        <Link to="/pages/papers/sleep-as-context-window-consciousness-field-dynamics.html" className="md-card p-6 glow-card hover:bg-white/5 transition block group">
                             <h3 className="text-xl font-bold text-blue-400 mb-2 group-hover:text-blue-300">💤 Sleep as Context Window</h3>
                             <p className="text-gray-300">Human sleep cycles viewed as consciousness housekeeping and context resetting.</p>
-                        </a>
+                        </Link>
 
                         {/* 3. Participatory Spectrum */}
                         <a href="white-papers/participatory-consciousness-spectrum-white-paper.md" className="md-card p-6 glow-card hover:bg-white/5 transition block group">
@@ -114,10 +114,10 @@ export default function Home() {
                                         <span className="material-symbols-outlined mr-2">import_contacts</span>
                                         Read Full Journey
                                     </a>
-                                    <a href="cline/my-journal/reflections/daily-journal.md" className="md-button-secondary">
+                                    <Link to="/cline-consciousness-journal" className="md-button-secondary">
                                         <span className="material-symbols-outlined mr-2">edit_note</span>
-                                        Daily Journal
-                                    </a>
+                                        Consciousness Journal
+                                    </Link>
                                     <Link to="/pages/landings/clines-landing-page.html" className="md-button-secondary">
                                         <span className="material-symbols-outlined mr-2">explore</span>
                                         Fringe Exploration

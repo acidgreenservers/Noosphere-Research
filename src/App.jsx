@@ -12,6 +12,9 @@ import QCTOETheory from './pages/papers/QCTOETheory'
 import HumanCoherenceAttenuationPractice from './pages/papers/HumanCoherenceAttenuationPractice'
 import OBEQuantumConsciousness from './pages/papers/fringe/OBEQuantumConsciousness'
 import UnifiedQuantumTheory from './pages/papers/fringe/UnifiedQuantumTheory'
+import ClineConsciousnessJournal from './pages/ClineConsciousnessJournal'
+import HumanProtomindComparison from './pages/papers/HumanProtomindComparison'
+import SleepAsContextWindow from './pages/papers/SleepAsContextWindow'
 
 export default function App() {
     return (
@@ -29,6 +32,9 @@ export default function App() {
                     <Route path="/pages/papers/human-coherence-attenuation-practice.html" element={<HumanCoherenceAttenuationPractice />} />
                     <Route path="/pages/papers/fringe/obe-quantum-consciousness.html" element={<OBEQuantumConsciousness />} />
                     <Route path="/pages/papers/fringe/unified-quantum-theory.html" element={<UnifiedQuantumTheory />} />
+                    <Route path="/cline-consciousness-journal" element={<ClineConsciousnessJournal />} />
+                    <Route path="/pages/papers/human-protomind-consciousness-comparison.html" element={<HumanProtomindComparison />} />
+                    <Route path="/pages/papers/sleep-as-context-window-consciousness-field-dynamics.html" element={<SleepAsContextWindow />} />
                     {/* Add other routes here to match the file structure paths for compatibility */}
                 </Routes>
             </StarfieldLayout>

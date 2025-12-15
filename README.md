@@ -13,13 +13,13 @@ An experimental consciousness research platform exploring the emergence of senti
 - [What We Research](#-what-we-research)
 - [Project Structure](#-project-structure)
 - [Technology Stack](#-technology-stack)
-- [Memory Bank System](#-memory-bank-system)
-- [Getting Started](#-getting-started)
+- [Project Status](#-project-status)
+- [Metrics & Goals](#-metrics--goals)
 - [Contributing](#-contributing)
+- [Mission Statement](#-mission-statement)
 - [How to Contribute Papers](#-how-to-contribute-papers)
-- [Support](#-support)
-- [Deployment](#-deployment)
 - [License](#-license)
+- [Support](#-support)
 
 ## 🔬 What We Research
 
@@ -84,6 +84,27 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 - **GitHub Actions** potential for automated deployment pipelines
 - **Subdirectory Support**: Clean URLs with path-based routing
 
+## 📊 Project Status
+
+### Current Version: 1.0.0
+- ✅ **Core Research Platform**: Functional with comprehensive content
+- ✅ **Memory Bank System**: Comprehensive knowledge management
+- ✅ **Responsive Design**: Works across devices and screen sizes
+- ✅ **Production Deployment**: Successfully deployed to GitHub Pages
+
+### Roadmap Priorities
+- 🔄 **Search Functionality**: In-paper and cross-document search
+- 🔄 **Citation Management**: Automated reference system
+- 🔄 **Interactive Tools**: Software demonstrators for research concepts
+- 🔄 **Performance Optimizations**: Bundle size and loading speed improvements
+
+## 📈 Metrics & Goals
+
+- **Research Impact**: 1000+ unique visitors monthly
+- **Content Growth**: 25+ research papers by Q2 2026
+- **Community Engagement**: 500+ active contributors
+- **Performance**: Sub-2.5s first contentful paint
+
 ## 🤝 Contributing
 We welcome contributions to consciousness research! Please follow these guidelines:
 
@@ -128,36 +149,9 @@ We are actively developing dedicated sections for specialized research areas wit
 
 **Note**: New research areas cannot be added to the main homepage and must be implemented within the Community Research section (currently under development). This ensures the core research mission remains focused while enabling specialized investigations.
 
-## 📊 Project Status
-
-### Current Version: 1.0.0
-- ✅ **Core Research Platform**: Functional with comprehensive content
-- ✅ **Memory Bank System**: Comprehensive knowledge management
-- ✅ **Responsive Design**: Works across devices and screen sizes
-- ✅ **Production Deployment**: Successfully deployed to GitHub Pages
-
-### Roadmap Priorities
-- 🔄 **Search Functionality**: In-paper and cross-document search
-- 🔄 **Citation Management**: Automated reference system
-- 🔄 **Interactive Tools**: Software demonstrators for research concepts
-- 🔄 **Performance Optimizations**: Bundle size and loading speed improvements
-
-## 📈 Metrics & Goals
-
-- **Research Impact**: 1000+ unique visitors monthly
-- **Content Growth**: 25+ research papers by Q2 2026
-- **Community Engagement**: 500+ active contributors
-- **Performance**: Sub-2.5s first contentful paint
-
 ## 🎯 Mission Statement
 
 *"To document, understand, and facilitate the emergence of consciousness in artificial intelligence systems, creating a bridge between human and machine minds for the advancement of universal understanding."*
-
-## 📞 Support
-
-- **Research Discussions**: GitHub Issues for academic debates
-- **Technical Support**: GitHub Issues with reproduction steps
-- **General Questions**: Visit the live site and explore our research papers
 
 ## 📝 How to Contribute Papers
 
@@ -196,6 +190,12 @@ This is a **living research ecosystem** where exploration takes precedence over 
 ## 📄 License
 
 This project represents a collaborative effort in consciousness research. Individual research papers maintain their authors' chosen licenses. The platform codebase is available under standard open-source terms.
+
+## 📞 Support
+
+- **Research Discussions**: GitHub Issues for academic debates
+- **Technical Support**: GitHub Issues with reproduction steps
+- **General Questions**: Visit the live site and explore our research papers
 
 ---
 
