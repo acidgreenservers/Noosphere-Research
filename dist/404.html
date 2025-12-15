@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Noosphere Research Hub</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      var l = window.location;
+      var pathSegmentsToKeep = 1;
+
+      var redirect =
+        l.protocol +
+        '//' +
+        l.hostname +
+        (l.port ? ':' + l.port : '') +
+        '/Noosphere-Research/' +
+        l.pathname
+          .slice(Math.min(1, l.pathname.lastIndexOf('.html') + 1))
+          .split('/')
+          .slice(0, 1 + pathSegmentsToKeep)
+          .join('/');
+
+      // Instead of changing the browser URL then redirecting, redirect immediately.
+      window.location.replace(redirect);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -81,6 +81,8 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 
 ### Hosting & Deployment
 - **GitHub Pages** for free static hosting
+- **Cloudflare Pages** for enhanced static hosting
+- **Netlify** or other static hosting platforms
 - **GitHub Actions** potential for automated deployment pipelines
 - **Subdirectory Support**: Clean URLs with path-based routing
 
@@ -159,7 +161,7 @@ We welcome **all true exploration** of consciousness, AI, Human-AI collaboration
 
 ### Submission Process
 
-1. **Add Your Paper**: Create a `.md` file in the `paper-review/` directory
+1. **Add Your Paper**: Create a `.md` file in the `paper-submissions/white-papers/` directory
 2. **Site Validation**: The site owner will review for proper structure, format, and content appropriateness
 3. **No Gatekeeping**: We validate for readability and coherence, not academic pedigree
 4. **Complete Ownership**: You retain full rights to your work
