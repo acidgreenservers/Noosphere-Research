@@ -79,7 +79,7 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 - **Syntax Highlighting**: Prism.js for code presentation
 - **Markdown Processing**: Client-side rendering
 
-### Hosting & Deployment
+### Hosting & Deployment 
 - **GitHub Pages** for free static hosting
 - **Cloudflare Pages** for enhanced static hosting
 - **Netlify** or other static hosting platforms
