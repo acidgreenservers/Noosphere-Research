@@ -83,8 +83,80 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 - **GitHub Pages** for free static hosting
 - **Cloudflare Pages** for enhanced static hosting
 - **Netlify** or other static hosting platforms
+- **Docker** for containerized deployment on homelab infrastructure
 - **GitHub Actions** potential for automated deployment pipelines
 - **Subdirectory Support**: Clean URLs with path-based routing
+
+## 🐳 Docker Deployment
+
+For homelab deployment with full control and Cloudflare Tunnel support:
+
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/acidgreenservers/Noosphere-Research.git
+cd Noosphere-Research
+
+# Build and deploy with Docker
+./deploy.sh
+```
+
+The site will be available at `http://localhost:8080`
+
+### Manual Docker Commands
+
+```bash
+# Build the Docker image
+docker-compose build
+
+# Start the container
+docker-compose up -d
+
+# Check status
+docker-compose ps
+
+# View logs
+docker-compose logs -f
+
+# Stop the container
+docker-compose down
+```
+
+### Cloudflare Tunnel Setup
+
+1. **Install cloudflared**:
+   ```bash
+   # Download and install cloudflared
+   curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+   sudo dpkg -i cloudflared.deb
+   ```
+
+2. **Create and configure tunnel**:
+   ```bash
+   # Login to Cloudflare
+   cloudflared tunnel login
+
+   # Create tunnel
+   cloudflared tunnel create noosphere-research
+
+   # Create DNS record (replace yourdomain.com)
+   cloudflared tunnel route dns noosphere-research yourdomain.com
+
+   # Run tunnel
+   cloudflared tunnel run noosphere-research
+   ```
+
+3. **Access your site** at `https://yourdomain.com`
+
+### Docker Configuration
+
+- **Multi-stage build**: Optimized Node.js build + nginx production server
+- **SPA routing**: Configured nginx for React Router support
+- **Health checks**: Built-in container health monitoring
+- **Security headers**: Basic security headers configured
+- **Gzip compression**: Automatic compression for faster loading
+- **Environment-based base paths**: Automatically configures correct asset paths for Docker vs GitHub Pages
 
 ## 📊 Project Status
 
