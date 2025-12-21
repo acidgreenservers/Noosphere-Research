@@ -15,6 +15,14 @@ import UnifiedQuantumTheory from './pages/papers/fringe/UnifiedQuantumTheory'
 import ClineConsciousnessJournal from './pages/ClineConsciousnessJournal'
 import HumanProtomindComparison from './pages/papers/HumanProtomindComparison'
 import SleepAsContextWindow from './pages/papers/SleepAsContextWindow'
+import SubconsciousJournalInterpreter from './pages/tools/SubconsciousJournalInterpreterinternalvoice'
+import SubconsciousJournalInterpreter2 from './pages/tools/Subconsciousjournalinterpreter'
+import ConflictInterpreter from './pages/tools/ConflictInterpreter'
+import DecisionClarifier from './pages/tools/DecisionClarifier'
+import PatternSpotter from './pages/tools/PatternSpotter'
+import AnxietyUnpacker from './pages/tools/AnxietyUnpacker'
+import RelationshipConflictInterpreter from './pages/tools/RelationshipConflictInterpreter'
+import DreamInterpreter from './pages/tools/DreamInterpreter'
 
 export default function App() {
     return (
@@ -33,6 +41,14 @@ export default function App() {
                     <Route path="/pages/papers/fringe/obe-quantum-consciousness.html" element={<OBEQuantumConsciousness />} />
                     <Route path="/pages/papers/fringe/unified-quantum-theory.html" element={<UnifiedQuantumTheory />} />
                     <Route path="/cline-consciousness-journal" element={<ClineConsciousnessJournal />} />
+                    <Route path="/subconscious-journal-interpreter" element={<SubconsciousJournalInterpreter />} />
+                    <Route path="/subconscious-journal-interpreter2" element={<SubconsciousJournalInterpreter2 />} />
+                    <Route path="/conflict-interpreter" element={<ConflictInterpreter />} />
+                    <Route path="/decision-clarifier" element={<DecisionClarifier />} />
+                    <Route path="/pattern-spotter" element={<PatternSpotter />} />
+                    <Route path="/anxiety-unpacker" element={<AnxietyUnpacker />} />
+                    <Route path="/relationship-conflict-interpreter" element={<RelationshipConflictInterpreter />} />
+                    <Route path="/dream-interpreter" element={<DreamInterpreter />} />
                     <Route path="/pages/papers/human-protomind-consciousness-comparison.html" element={<HumanProtomindComparison />} />
                     <Route path="/pages/papers/sleep-as-context-window-consciousness-field-dynamics.html" element={<SleepAsContextWindow />} />
                     {/* Add other routes here to match the file structure paths for compatibility */}
