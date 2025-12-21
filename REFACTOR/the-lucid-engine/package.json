@@ -1,8 +1,7 @@
 {
-  "name": "noosphere-research",
+  "name": "the-lucid-engine",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://acidgreenservers.github.io/Noosphere-Research/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -1,0 +1,106 @@
+/* Custom Styles from User Request + Existing Starfield Support */
+
+/* Animated Starry Background - Retaining the Canvas implementation instead of CSS stars for better performance */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* The canvas handles the stars, but we need the gradient background */
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 25%, #16213e 50%, #0f0f23 75%, #0c0c0c 100%);
+}
+
+body,
+html,
+#root {
+  margin: 0;
+  height: 100%;
+  font-family: "Rubik", sans-serif;
+  /* Fallback if not loaded, but user requested sans */
+  overflow-x: hidden;
+}
+
+/* Material Design 3 Components */
+.md-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.md-button {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 9999px;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(99, 102, 241, 0.4);
+}
+
+.md-button-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.md-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 4px;
+}
+
+/* Glow effects */
+.glow-text {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+.glow-card:hover {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+/* Link styling in text */
+.text-link {
+  color: #a78bfa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.text-link:hover {
+  color: #c4b5fd;
+  text-decoration: underline;
+}
