@@ -333,19 +333,75 @@ export default function Home() {
                             <span className="material-symbols-outlined mr-3 text-purple-400">view_in_ar</span>
                             Interactive Consciousness Tools
                         </h2>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="md-card p-6 glow-card bg-black/20">
-                                <h3 className="text-xl font-semibold text-purple-300 mb-2">Step Pyramid Topology</h3>
-                                <p className="text-gray-400 mb-4">Interactive 3D visualization of consciousness as a three-place relation: Field (F), Self (S), Modulates boundaries (M).</p>
-                                <div className="flex gap-3">
-                                    <a href="hrv_full_interactive.html" className="md-button text-sm">Full Interactive</a>
-                                    <a href="hrv_basic_view.html" className="md-button-secondary text-sm">Basic View</a>
-                                </div>
-                            </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                             <div className="md-card p-6 glow-card bg-black/20">
                                 <h3 className="text-xl font-semibold text-blue-300 mb-2">HRV Meditation Guide</h3>
                                 <p className="text-gray-400 mb-4">Guided coherence training using topological visualization for biofeedback integration.</p>
                                 <a href="white-papers/topological-hrv-coherence-meditation-guide.md" className="md-button-secondary text-sm">Read Guide</a>
+                            </div>
+                            <div className="md-card p-6 glow-card bg-black/20">
+                                <h3 className="text-xl font-semibold text-pink-300 mb-2">Subconscious Journal Interpreter: Internal Voice Edition</h3>
+                                <p className="text-gray-400 mb-4">AI-powered analysis revealing hidden patterns and subconscious currents in your journal entries.</p>
+                                <Link to="/subconscious-journal-interpreter" className="md-button text-sm">
+                                    <span className="material-symbols-outlined mr-1">psychology</span>
+                                    Try Tool
+                                </Link>
+                            </div>
+                            <div className="md-card p-6 glow-card bg-black/20">
+                                <h3 className="text-xl font-semibold text-cyan-300 mb-2">Subconscious Journal Interpreter: Deep Patterns</h3>
+                                <p className="text-gray-400 mb-4">Detailed emotional and cognitive analysis revealing defense mechanisms and growth opportunities.</p>
+                                <Link to="/subconscious-journal-interpreter2" className="md-button text-sm">
+                                    <span className="material-symbols-outlined mr-1">psychology_alt</span>
+                                    Try Tool
+                                </Link>
+                            </div>
+                            <div className="md-card p-6 glow-card bg-black/20">
+                                <h3 className="text-xl font-semibold text-rose-300 mb-2">Conflict Interpreter</h3>
+                                <p className="text-gray-400 mb-4">AI-powered mediation revealing underlying needs and bridge-building solutions for relationship conflicts.</p>
+                                <Link to="/conflict-interpreter" className="md-button text-sm">
+                                    <span className="material-symbols-outlined mr-1">diversity_3</span>
+                                    Try Tool
+                                </Link>
+                            </div>
+                            <div className="md-card p-6 glow-card bg-black/20">
+                                <h3 className="text-xl font-semibold text-indigo-300 mb-2">Decision Clarifier</h3>
+                                <p className="text-gray-400 mb-4">AI-powered decision analysis revealing values in conflict, hidden factors, and clarity for tough choices.</p>
+                                <Link to="/decision-clarifier" className="md-button text-sm">
+                                    <span className="material-symbols-outlined mr-1">compass_calibration</span>
+                                    Try Tool
+                                </Link>
+                            </div>
+                            <div className="md-card p-6 glow-card bg-black/20">
+                                <h3 className="text-xl font-semibold text-violet-300 mb-2">Pattern Spotter</h3>
+                                <p className="text-gray-400 mb-4">AI-powered systemic analysis revealing recurring patterns, feedback loops, and leverage points for change.</p>
+                                <Link to="/pattern-spotter" className="md-button text-sm">
+                                    <span className="material-symbols-outlined mr-1">pattern</span>
+                                    Try Tool
+                                </Link>
+                            </div>
+                            <div className="md-card p-6 glow-card bg-black/20">
+                                <h3 className="text-xl font-semibold text-teal-300 mb-2">Anxiety Unpacker</h3>
+                                <p className="text-gray-400 mb-4">AI-powered anxiety analysis revealing root fears, thought distortions, and actionable steps for clarity.</p>
+                                <Link to="/anxiety-unpacker" className="md-button text-sm">
+                                    <span className="material-symbols-outlined mr-1">spa</span>
+                                    Try Tool
+                                </Link>
+                            </div>
+                            <div className="md-card p-6 glow-card bg-black/20">
+                                <h3 className="text-xl font-semibold text-emerald-300 mb-2">Relationship Conflict Interpreter</h3>
+                                <p className="text-gray-400 mb-4">AI-powered couples therapy revealing underlying needs, patterns, and bridge-building paths for reconciliation.</p>
+                                <Link to="/relationship-conflict-interpreter" className="md-button text-sm">
+                                    <span className="material-symbols-outlined mr-1">favorite</span>
+                                    Try Tool
+                                </Link>
+                            </div>
+                            <div className="md-card p-6 glow-card bg-black/20">
+                                <h3 className="text-xl font-semibold text-orange-300 mb-2">Dream Interpreter</h3>
+                                <p className="text-gray-400 mb-4">AI-powered dream analysis revealing themes, symbols, and personal insights from your subconscious mind.</p>
+                                <Link to="/dream-interpreter" className="md-button text-sm">
+                                    <span className="material-symbols-outlined mr-1">bedtime</span>
+                                    Try Tool
+                                </Link>
                             </div>
                         </div>
                     </div>

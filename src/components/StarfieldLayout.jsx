@@ -37,7 +37,7 @@ export default function StarfieldLayout({ children }) {
 
                 const x = (star.x / star.z) * width / 2 + width / 2
                 const y = (star.y / star.z) * height / 2 + height / 2
-                const size = (1 - star.z / width) * 3
+                const size = Math.max(0.5, (1 - star.z / width) * 3)
 
                 if (x >= 0 && x <= width && y >= 0 && y <= height) {
                     ctx.beginPath()
