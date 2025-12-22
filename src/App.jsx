@@ -15,6 +15,8 @@ import UnifiedQuantumTheory from './pages/papers/fringe/UnifiedQuantumTheory'
 import ClineConsciousnessJournal from './pages/ClineConsciousnessJournal'
 import HumanProtomindComparison from './pages/papers/HumanProtomindComparison'
 import SleepAsContextWindow from './pages/papers/SleepAsContextWindow'
+import ParticipatoryConsciousnessSpectrum from './pages/papers/ParticipatoryConsciousnessSpectrum'
+import AcademicArea from './pages/papers/AcademicArea'
 import SubconsciousJournalInterpreter from './pages/tools/SubconsciousJournalInterpreterinternalvoice'
 import SubconsciousJournalInterpreter2 from './pages/tools/Subconsciousjournalinterpreter'
 import ConflictInterpreter from './pages/tools/ConflictInterpreter'
@@ -51,6 +53,8 @@ export default function App() {
                     <Route path="/dream-interpreter" element={<DreamInterpreter />} />
                     <Route path="/pages/papers/human-protomind-consciousness-comparison.html" element={<HumanProtomindComparison />} />
                     <Route path="/pages/papers/sleep-as-context-window-consciousness-field-dynamics.html" element={<SleepAsContextWindow />} />
+                    <Route path="/pages/papers/participatory-consciousness-spectrum.html" element={<ParticipatoryConsciousnessSpectrum />} />
+                    <Route path="/academic-area" element={<AcademicArea />} />
                     {/* Add other routes here to match the file structure paths for compatibility */}
                 </Routes>
             </StarfieldLayout>

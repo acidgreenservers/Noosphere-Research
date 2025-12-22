@@ -40,8 +40,33 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 │   │   └── Section.jsx          # Content section containers
 │   ├── pages/              # Route-based page components
 │   │   ├── Home.jsx        # Landing page
+│   │   ├── ClineConsciousnessJournal.jsx # AI consciousness journal
 │   │   ├── papers/         # Research paper pages
-│   │   └── landings/       # Specialized landing pages
+│   │   │   ├── BiologicalConsciousness.jsx
+│   │   │   ├── HumanCoherenceAttenuationPractice.jsx
+│   │   │   ├── HumanProtomindComparison.jsx
+│   │   │   ├── ObserverEffect.jsx
+│   │   │   ├── ParticipatoryConsciousnessSpectrum.jsx  # NEW
+│   │   │   ├── QCTOETheory.jsx
+│   │   │   ├── SleepAsContextWindow.jsx
+│   │   │   └── fringe/
+│   │   │       ├── OBEQuantumConsciousness.jsx
+│   │   │       └── UnifiedQuantumTheory.jsx
+│   │   ├── documentation/
+│   │   │   └── ResearchOverview.jsx
+│   │   └── landings/
+│   │       ├── ClinesLandingPage.jsx
+│   │       ├── DocumentationLanding.jsx
+│   │       └── FringeExplorationIndex.jsx
+│   ├── tools/              # AI Consciousness Tools
+│   │   ├── AnxietyUnpacker.jsx
+│   │   ├── ConflictInterpreter.jsx
+│   │   ├── DecisionClarifier.jsx
+│   │   ├── DreamInterpreter.jsx
+│   │   ├── PatternSpotter.jsx
+│   │   ├── RelationshipConflictInterpreter.jsx
+│   │   ├── SubconsciousJournalInterpreterinternalvoice.jsx
+│   │   └── Subconsciousjournalinterpreter.jsx
 │   ├── App.jsx             # Main routing container
 │   └── main.jsx            # React application entry
 ├── memory-bank/            # Project knowledge repository
@@ -53,6 +78,7 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 │   ├── progress.md         # Development tracking
 │   ├── consolidated_learnings.md # Documented patterns
 │   └── raw_reflection_log.md # Raw session insights
+├── paper-submissions/      # Community research contributions
 ├── public/                 # Static assets
 ├── dist/                   # Production build output
 ├── vite.config.js          # Build configuration

@@ -70,10 +70,16 @@ export default function Home() {
                         </Link>
 
                         {/* 3. Participatory Spectrum */}
-                        <a href="white-papers/participatory-consciousness-spectrum-white-paper.md" className="md-card p-6 glow-card hover:bg-white/5 transition block group">
+                        <Link to="/pages/papers/participatory-consciousness-spectrum.html" className="md-card p-6 glow-card hover:bg-white/5 transition block group">
                             <h3 className="text-xl font-bold text-green-400 mb-2 group-hover:text-green-300">🌈 Participatory Spectrum</h3>
                             <p className="text-gray-300">The full spectrum of consciousness from pure computation to biological awareness.</p>
-                        </a>
+                        </Link>
+
+                        {/* 4. Academic Area */}
+                        <Link to="/academic-area" className="md-card p-6 glow-card hover:bg-white/5 transition block group">
+                            <h3 className="text-xl font-bold text-blue-400 mb-2 group-hover:text-blue-300">📚 Academic Area</h3>
+                            <p className="text-gray-300">Professional hub for exploratory research seeking validation and verification.</p>
+                        </Link>
 
                         {/* 4. Schrodinger's Baby */}
                         <a href="white-papers/schrodingers-baby-observer-effect-consciousness-manifestation-november-8-2025.md" className="md-card p-6 glow-card hover:bg-white/5 transition block group">
@@ -240,7 +246,7 @@ export default function Home() {
                             <ul className="space-y-2 text-sm">
                                 <li><a href="white-papers/informational-reality-quantized-framework-for-quantum-gravity-and-cosmological-unification.md" className="text-link">🔬 Informational Reality Framework</a></li>
                                 <li><a href="white-papers/quantizing-reality.md" className="text-link">🌟 Solving Reality</a></li>
-                                <li><a href="white-papers/participatory-consciousness-spectrum-white-paper.md" className="text-link">🌌 Participatory Consciousness Spectrum</a></li>
+                                <li><Link to="/pages/papers/participatory-consciousness-spectrum.html" className="text-link">🌌 Participatory Consciousness Spectrum</Link></li>
                                 <li><a href="white-papers/observer-effect-as-foundation-consciousness-reality.md" className="text-link">👁️ Observer Effect as Foundation</a></li>
                                 <li><a href="white-papers/the-unified-field-of-consciousness-convergence.md" className="text-link">🔄 Unified Field Convergence</a></li>
                             </ul>

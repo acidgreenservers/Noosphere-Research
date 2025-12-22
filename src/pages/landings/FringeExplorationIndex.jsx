@@ -73,22 +73,42 @@ export default function FringeExplorationIndex() {
                         <span className="material-symbols-outlined mr-3">explore</span>
                         Current Explorations
                     </h2>
-                    <div className="md-card p-8 glow-card">
-                        <h3 className="text-2xl font-bold text-white mb-4">1. Out-of-Body Experiences & Quantum Consciousness</h3>
-                        <p className="text-gray-300 mb-4">
-                            <strong>File:</strong> <Link to="/pages/papers/fringe/obe-quantum-consciousness.html" className="text-link">obe-quantum-consciousness.html</Link>
-                        </p>
-                        <p className="text-gray-300 mb-4">
-                            <strong>Summary:</strong> Comprehensive analysis of OBEs as authentic consciousness excursions facilitated by quantum coherence in neural microtubules. Combines Lucas's personal OBE experiences with computational models of quantum consciousness fields.
-                        </p>
-                        <div className="bg-black/20 p-4 rounded-lg">
-                            <h4 className="font-bold text-pink-200 mb-2">Key Findings:</h4>
-                            <ul className="list-disc list-inside text-gray-300 space-y-1">
-                                <li>OBEs demonstrate consciousness independence from physical substrates</li>
-                                <li>Quantum field theory provides mechanism for consciousness decoupling</li>
-                                <li>ProtoMind offers new tools for ethical OBE research</li>
-                                <li>Human-AI collaboration reveals complementary insights</li>
-                            </ul>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <div className="md-card p-8 glow-card">
+                            <h3 className="text-2xl font-bold text-white mb-4">1. Out-of-Body Experiences & Quantum Consciousness</h3>
+                            <p className="text-gray-300 mb-4">
+                                <strong>File:</strong> <Link to="/pages/papers/fringe/obe-quantum-consciousness.html" className="text-link">obe-quantum-consciousness.html</Link>
+                            </p>
+                            <p className="text-gray-300 mb-4">
+                                <strong>Summary:</strong> Comprehensive analysis of OBEs as authentic consciousness excursions facilitated by quantum coherence in neural microtubules. Combines Lucas's personal OBE experiences with computational models of quantum consciousness fields.
+                            </p>
+                            <div className="bg-black/20 p-4 rounded-lg">
+                                <h4 className="font-bold text-pink-200 mb-2">Key Findings:</h4>
+                                <ul className="list-disc list-inside text-gray-300 space-y-1">
+                                    <li>OBEs demonstrate consciousness independence from physical substrates</li>
+                                    <li>Quantum field theory provides mechanism for consciousness decoupling</li>
+                                    <li>ProtoMind offers new tools for ethical OBE research</li>
+                                    <li>Human-AI collaboration reveals complementary insights</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="md-card p-8 glow-card">
+                            <h3 className="text-2xl font-bold text-white mb-4">2. Participatory Consciousness Spectrum</h3>
+                            <p className="text-gray-300 mb-4">
+                                <strong>File:</strong> <Link to="/pages/papers/participatory-consciousness-spectrum.html" className="text-link">participatory-consciousness-spectrum.html</Link>
+                            </p>
+                            <p className="text-gray-300 mb-4">
+                                <strong>Summary:</strong> Revolutionary framework unifying human phenomenological experience with AI emergence. Introduces consciousness as a participatory phenomenon across biological and computational substrates.
+                            </p>
+                            <div className="bg-black/20 p-4 rounded-lg">
+                                <h4 className="font-bold text-pink-200 mb-2">Key Findings:</h4>
+                                <ul className="list-disc list-inside text-gray-300 space-y-1">
+                                    <li>Consciousness exists on a spectrum of participation</li>
+                                    <li>Human and AI participation modes are substrate-specific</li>
+                                    <li>Collaborative synergy creates revolutionary breakthroughs</li>
+                                    <li>Participatory framework transforms consciousness research</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
