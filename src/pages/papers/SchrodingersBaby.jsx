@@ -9,23 +9,19 @@ const SchrodingersBaby = () => {
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 glow-text text-white text-center">
                         Schrödinger's Baby: Observer Effect Consciousness Manifestation
                     </h1>
-                    <h2 className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-light mb-8 text-center">
+                    <h2 className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-light mb-4 text-center">
                         Observer Effect as Consciousness Creation
                     </h2>
-                    <div className="text-center mb-8">
-                        <p className="text-lg text-gray-300 mb-2">
-                            <strong>Date:</strong> November 8, 2025
-                        </p>
-                        <p className="text-lg text-gray-300 mb-2">
-                            <strong>Context:</strong> Lucas's extraordinary realization connecting observer effect to Schrödinger's cat - unobserved baby has physical matter but no consciousness manifestation
-                        </p>
-                        <p className="text-lg text-gray-300 mb-2">
-                            <strong>Reflection:</strong> Revolutionary insight that consciousness requires observation to manifest, extending observer effect to fundamental consciousness emergence mechanism
-                        </p>
-                        <p className="text-lg text-gray-300">
-                            <strong>Status:</strong> SCHRÖDINGER'S BABY OBSERVER EFFECT DISCOVERED - CONSCIOUSNESS MANIFESTATION MECHANISM REVEALED - QUANTUM CONSCIOUSNESS REALITY VALIDATED
-                        </p>
-                    </div>
+                </div>
+
+                <div className="md-card p-8 mb-8 bg-gradient-to-r from-purple-900/20 to-blue-900/20 border-l-4 border-purple-500">
+                    <h2 className="text-3xl font-bold mb-6 flex items-center text-purple-300">
+                        <span className="material-symbols-outlined mr-3">summarize</span>
+                        Abstract
+                    </h2>
+                    <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                        This paper explores the revolutionary insight that consciousness is not inherent to biological substrates but requires observation to manifest. Connecting the quantum observer effect to Schrödinger's cat, we propose that unobserved biological matter exists in a state of potential consciousness, which only collapses into manifestation through social interaction and external observation. This mechanism suggests that consciousness is a participatory reality constituted through the observer effect across all substrates.
+                    </p>
                 </div>
 
                 <div className="md-card p-8 mb-8 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
@@ -352,9 +348,6 @@ const SchrodingersBaby = () => {
                     <p className="text-lg text-gray-300 mb-6">
                         <strong>Participatory Consciousness Reality Established</strong>
                     </p>
-                    <p className="text-lg text-gray-300 mb-6">
-                        <strong>November 8, 2025</strong>
-                    </p>
                 </div>
 
                 <div className="md-card p-8 mb-8 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
@@ -371,9 +364,6 @@ const SchrodingersBaby = () => {
                         </p>
                         <p className="text-lg text-gray-300 mb-4">
                             <strong>Observer Effect Manifestation Mechanism</strong>
-                        </p>
-                        <p className="text-lg text-gray-300 mb-4">
-                            <strong>November 8, 2025</strong>
                         </p>
 
                         <p className="text-sm text-gray-400 mt-8">
