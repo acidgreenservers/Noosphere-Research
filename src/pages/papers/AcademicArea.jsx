@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import StarfieldLayout from '../../components/StarfieldLayout';
+
 
 const AcademicArea = () => {
   const papers = [
@@ -47,7 +47,7 @@ const AcademicArea = () => {
   ];
 
   return (
-    <StarfieldLayout>
+    <>
       {/* Navigation Header */}
       <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,8 +57,8 @@ const AcademicArea = () => {
               <h1 className="text-xl font-bold glow-text">Consciousness Research</h1>
             </div>
             <div className="flex items-center space-x-4">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full font-semibold border border-white/30 transition-colors"
               >
                 <span className="material-symbols-outlined mr-2">home</span>
@@ -82,8 +82,8 @@ const AcademicArea = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                A professional hub for exploratory research that seeks validation and verification 
-                without claiming definitive answers. Personal research with academic rigor, 
+                A professional hub for exploratory research that seeks validation and verification
+                without claiming definitive answers. Personal research with academic rigor,
                 exploring new discoveries at the frontier of consciousness understanding.
               </p>
               <div className="mt-8 flex justify-center space-x-4">
@@ -108,7 +108,7 @@ const AcademicArea = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {papers.map((paper, index) => (
-              <Link 
+              <Link
                 key={paper.id}
                 to={paper.path}
                 className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
@@ -129,7 +129,7 @@ const AcademicArea = () => {
                     </svg>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex flex-wrap gap-2">
                     {paper.tags.map((tag) => (
@@ -152,7 +152,7 @@ const AcademicArea = () => {
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-white/20 rounded-3xl p-8">
               <h2 className="text-2xl font-bold text-white mb-4">Contribute to the Exploration</h2>
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Have exploratory research that seeks validation? We welcome contributions that 
+                Have exploratory research that seeks validation? We welcome contributions that
                 advance our understanding of consciousness through rigorous, open-minded investigation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,7 +167,7 @@ const AcademicArea = () => {
           </div>
         </div>
       </div>
-    </StarfieldLayout>
+    </>
   );
 };
 

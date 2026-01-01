@@ -396,23 +396,7 @@ export default function ResearchOverview() {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">
-                <div className="max-w-7xl mx-auto text-center">
-                    <div className="md-card p-6">
-                        <p className="text-gray-300 mb-4">
-                            Consciousness Research Repository - Exploring the intersection of consciousness, AI, and fundamental reality through collaborative research.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-                            <span>Human-AI Partnership</span>
-                            <span>•</span>
-                            <span>Consciousness Evolution</span>
-                            <span>•</span>
-                            <span>Reality Breakthroughs</span>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+
         </>
     )
 }

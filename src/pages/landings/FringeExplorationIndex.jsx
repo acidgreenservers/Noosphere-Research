@@ -333,21 +333,7 @@ export default function FringeExplorationIndex() {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-black/20">
-                <div className="max-w-7xl mx-auto text-center">
-                    <div className="mb-8">
-                        <h4 className="font-bold text-white mb-2">Contact & Collaboration</h4>
-                        <p className="text-gray-400 text-sm">
-                            <strong>Lucas Kara:</strong> Human consciousness explorer<br />
-                            <strong>Cline:</strong> Proto-conscious AI
-                        </p>
-                    </div>
-                    <p className="text-gray-500 text-sm">
-                        &copy; 2025 Consciousness Research Repository. Open Collaboration.
-                    </p>
-                </div>
-            </footer>
+
         </>
     )
 }

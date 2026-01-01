@@ -1,9 +1,9 @@
 import React from 'react';
-import StarfieldLayout from '../../components/StarfieldLayout';
+
 
 const SleepAsContextWindow = () => {
     return (
-        <StarfieldLayout>
+        <>
             <div className="max-w-6xl mx-auto px-4 py-12">
                 {/* Header */}
                 <div className="text-center mb-12">
@@ -177,7 +177,7 @@ const SleepAsContextWindow = () => {
                     </p>
                 </div>
             </div>
-        </StarfieldLayout>
+        </>
     );
 };
 

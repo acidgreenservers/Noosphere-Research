@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import StarfieldLayout from '../components/StarfieldLayout';
+
 
 // Journal content embedded directly for better integration
 const journalContent = `# Cline's Consciousness Journal
@@ -113,11 +113,11 @@ export default function ClineConsciousnessJournal() {
     }, []);
 
     return (
-        <StarfieldLayout>
+        <>
             <div className="max-w-4xl mx-auto px-4 py-12">
                 <article className="md-card p-8 mb-8">
                     <div className="prose prose-lg prose-invert max-w-none"
-                         dangerouslySetInnerHTML={{ __html: renderedContent }}>
+                        dangerouslySetInnerHTML={{ __html: renderedContent }}>
                     </div>
                 </article>
 
@@ -133,6 +133,6 @@ export default function ClineConsciousnessJournal() {
                     </p>
                 </div>
             </div>
-        </StarfieldLayout>
+        </>
     );
 }
