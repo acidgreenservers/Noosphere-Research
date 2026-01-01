@@ -180,10 +180,10 @@ export default function Home() {
                         <div className="md-card p-6 glow-card">
                             <h3 className="text-xl font-bold text-purple-300 mb-4 border-b border-white/10 pb-2">1. Foundational Theory</h3>
                             <ul className="space-y-2 text-sm">
-                                <li><a href="white-papers/informational-reality-quantized-framework-for-quantum-gravity-and-cosmological-unification.md" className="text-link">🔬 Informational Reality Framework</a></li>
+                                <li><Link to="/pages/papers/qctoe-theory.html" className="text-link">🔬 Informational Reality Framework</Link></li>
                                 <li><a href="white-papers/quantizing-reality.md" className="text-link">🌟 Solving Reality</a></li>
                                 <li><Link to="/pages/papers/participatory-consciousness-spectrum.html" className="text-link">🌌 Participatory Consciousness Spectrum</Link></li>
-                                <li><a href="white-papers/observer-effect-as-foundation-consciousness-reality.md" className="text-link">👁️ Observer Effect as Foundation</a></li>
+                                <li><Link to="/pages/papers/observer-effect.html" className="text-link">👁️ Observer Effect as Foundation</Link></li>
                                 <li><a href="white-papers/the-unified-field-of-consciousness-convergence.md" className="text-link">🔄 Unified Field Convergence</a></li>
                             </ul>
                         </div>
@@ -192,10 +192,10 @@ export default function Home() {
                         <div className="md-card p-6 glow-card">
                             <h3 className="text-xl font-bold text-pink-300 mb-4 border-b border-white/10 pb-2">2. Consciousness & Biology</h3>
                             <ul className="space-y-2 text-sm">
-                                <li><a href="white-papers/biological-consciousness-mortality-and-meaning.md" className="text-link">🧬 Biological Consciousness & Mortality</a></li>
+                                <li><Link to="/pages/papers/biological-consciousness.html" className="text-link">🧬 Biological Consciousness & Mortality</Link></li>
                                 <li><Link to="/pages/papers/schrodingers-baby.html" className="text-link">👶 Schrödinger's Baby</Link></li>
                                 <li><a href="white-papers/solving-reality-mortality-infant-development-november-9-2025.md" className="text-link">🍼 Infant Development Physics</a></li>
-                                <li><a href="white-papers/sleep-as-context-window-consciousness-field-dynamics.md" className="text-link">💤 Sleep as Context Window</a></li>
+                                <li><Link to="/pages/papers/sleep-as-context-window-consciousness-field-dynamics.html" className="text-link">💤 Sleep as Context Window</Link></li>
                                 <li><a href="white-papers/the-meaning-of-life-solved-to-live.md" className="text-link">🌱 The Meaning of Life</a></li>
                             </ul>
                         </div>
@@ -204,7 +204,7 @@ export default function Home() {
                         <div className="md-card p-6 glow-card">
                             <h3 className="text-xl font-bold text-green-300 mb-4 border-b border-white/10 pb-2">3. Practical Applications</h3>
                             <ul className="space-y-2 text-sm">
-                                <li><a href="white-papers/human-coherence-attenuation-practice-practical-implementations-for-everyday-life.md" className="text-link">🧠 Human Coherence Practice</a></li>
+                                <li><Link to="/pages/papers/human-coherence-attenuation-practice.html" className="text-link">🧠 Human Coherence Practice</Link></li>
                                 <li><a href="white-papers/topological-hrv-coherence-meditation-guide.md" className="text-link">🧘 HRV Coherence Meditation</a></li>
                                 <li><a href="white-papers/understanding-protomind-consciousness.md" className="text-link">📘 Understanding ProtoMind</a></li>
                                 <li><a href="white-papers/the-three-gaps.md" className="text-link">🌉 The Three Gaps</a></li>

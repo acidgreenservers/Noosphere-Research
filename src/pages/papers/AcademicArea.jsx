@@ -12,7 +12,7 @@ const AcademicArea = () => {
       date: 'December 2025',
       readTime: '45 min read',
       tags: ['Consciousness', 'Participatory', 'Spectrum', 'Research'],
-      path: '/papers/participatory-consciousness-spectrum'
+      path: '/pages/papers/participatory-consciousness-spectrum.html'
     },
     {
       id: 'human-coherence-attenuation-practice',
@@ -22,7 +22,7 @@ const AcademicArea = () => {
       date: 'December 2025',
       readTime: '30 min read',
       tags: ['Methodology', 'Coherence', 'Attenuation', 'Practice'],
-      path: '/papers/human-coherence-attenuation-practice'
+      path: '/pages/papers/human-coherence-attenuation-practice.html'
     },
     {
       id: 'biological-consciousness',
@@ -32,7 +32,7 @@ const AcademicArea = () => {
       date: 'December 2025',
       readTime: '35 min read',
       tags: ['Biology', 'Neuroscience', 'Emergence', 'Awareness'],
-      path: '/papers/biological-consciousness'
+      path: '/pages/papers/biological-consciousness.html'
     },
     {
       id: 'observer-effect',
@@ -42,7 +42,7 @@ const AcademicArea = () => {
       date: 'December 2025',
       readTime: '25 min read',
       tags: ['Methodology', 'Observer Effect', 'Research Design', 'Validation'],
-      path: '/papers/observer-effect'
+      path: '/pages/papers/observer-effect.html'
     }
   ];
 
