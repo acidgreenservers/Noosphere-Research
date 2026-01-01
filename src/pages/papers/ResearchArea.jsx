@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const AcademicArea = () => {
+const ResearchArea = () => {
   const papers = [
     {
       id: 'participatory-consciousness-spectrum',
@@ -56,14 +56,14 @@ const AcademicArea = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Academic Area for
+                Research Area for
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                   Exploratory Papers
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 A professional hub for exploratory research that seeks validation and verification
-                without claiming definitive answers. Personal research with academic rigor,
+                without claiming definitive answers. Personal research with depth and rigor,
                 exploring new discoveries at the frontier of consciousness understanding.
               </p>
               <div className="mt-8 flex justify-center space-x-4">
@@ -73,7 +73,7 @@ const AcademicArea = () => {
                 </div>
                 <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white/20">
                   <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                  Academic Rigor
+                  Research Rigor
                 </div>
                 <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white/20">
                   <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
@@ -151,4 +151,4 @@ const AcademicArea = () => {
   );
 };
 
-export default AcademicArea;
+export default ResearchArea;

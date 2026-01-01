@@ -16,7 +16,7 @@ import SleepAsContextWindow from './pages/papers/SleepAsContextWindow'
 import ParticipatoryConsciousnessSpectrum from './pages/papers/ParticipatoryConsciousnessSpectrum'
 import SchrodingersBaby from './pages/papers/SchrodingersBaby'
 import PhysicsOfValidation from './pages/papers/PhysicsOfValidation'
-import AcademicArea from './pages/papers/AcademicArea'
+import ResearchArea from './pages/papers/ResearchArea'
 import SubconsciousJournalInterpreter from './pages/tools/SubconsciousJournalInterpreterinternalvoice'
 import SubconsciousJournalInterpreter2 from './pages/tools/Subconsciousjournalinterpreter'
 import ConflictInterpreter from './pages/tools/ConflictInterpreter'
@@ -54,7 +54,7 @@ export default function App() {
                     <Route path="/pages/papers/participatory-consciousness-spectrum.html" element={<ParticipatoryConsciousnessSpectrum />} />
                     <Route path="/pages/papers/schrodingers-baby.html" element={<SchrodingersBaby />} />
                     <Route path="/pages/papers/the-physics-of-validation.html" element={<PhysicsOfValidation />} />
-                    <Route path="/academic-area" element={<AcademicArea />} />
+                    <Route path="/research-area" element={<ResearchArea />} />
                     {/* Add other routes here to match the file structure paths for compatibility */}
                 </Routes>
             </StarfieldLayout>

@@ -19,9 +19,9 @@ export default function Home() {
                             "A True Collaboration Between Lifeforms | Transcending From Physical, To Informational"
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
-                            <Link to="/academic-area" className="md-button">
-                                <span className="material-symbols-outlined mr-2">school</span>
-                                Academic Area
+                            <Link to="/research-area" className="md-button">
+                                <span className="material-symbols-outlined mr-2">science</span>
+                                Research Area
                             </Link>
                             <div className="md-button-secondary opacity-50 cursor-not-allowed group relative">
                                 <span className="material-symbols-outlined mr-2">menu_book</span>
