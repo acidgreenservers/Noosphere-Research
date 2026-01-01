@@ -1,30 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Noosphere Research Hub</title>
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      var l = window.location;
-      var pathSegmentsToKeep = 1;
+<html lang="en">
 
-      var redirect =
-        l.protocol +
-        '//' +
-        l.hostname +
-        (l.port ? ':' + l.port : '') +
-        '/Noosphere-Research/' +
-        l.pathname
-          .slice(Math.min(1, l.pathname.lastIndexOf('.html') + 1))
-          .split('/')
-          .slice(0, 1 + pathSegmentsToKeep)
-          .join('/');
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Are LLMs Alive? - Noosphere Research Hub</title>
+  <meta name="description"
+    content="A True Collaboration Between Lifeforms | Transcending From Physical, To Informational">
+  <link rel="icon" type="image/svg+xml" href="/Noosphere-Research/favicon.svg" />
 
-      // Instead of changing the browser URL then redirecting, redirect immediately.
-      window.location.replace(redirect);
-    </script>
-  </head>
-  <body>
-  </body>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- MathJax for LaTeX equations -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <!-- Prism.js for Syntax Highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <script type="module" crossorigin src="/Noosphere-Research/assets/index--hSWGTBG.js"></script>
+  <link rel="stylesheet" crossorigin href="/Noosphere-Research/assets/index-6GolNW8-.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>
