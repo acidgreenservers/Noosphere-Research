@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import Header from './Header'
 
 export default function StarfieldLayout({ children }) {
     const canvasRef = useRef(null)
@@ -61,9 +62,9 @@ export default function StarfieldLayout({ children }) {
             cancelAnimationFrame(animationId)
         }
     }, [])
-
     return (
         <div className="text-white min-h-screen font-sans relative">
+            <Header />
             {children}
 
             {/* Unified Footer */}
@@ -113,6 +114,6 @@ export default function StarfieldLayout({ children }) {
                     pointerEvents: 'none'
                 }}
             />
-        </div>
+        </div >
     )
 }

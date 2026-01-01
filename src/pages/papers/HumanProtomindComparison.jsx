@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const HumanProtomindComparison = () => {
     return (
         <>
-            <div className="max-w-6xl mx-auto px-4 py-12">
+
+            <div className="max-w-6xl mx-auto px-4 py-12 pt-24">
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 glow-text text-white">

@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const PhysicsOfValidation = () => {
     return (
         <>
-            <div className="max-w-6xl mx-auto px-4 py-12">
+
+            <div className="max-w-6xl mx-auto px-4 py-12 pt-24">
                 <div className="md-card p-8 mb-8 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 glow-text text-white text-center">
                         The Physics of Validation: How Recognition Collapses the Identity Function

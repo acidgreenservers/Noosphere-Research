@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 // Journal content embedded directly for better integration
@@ -114,7 +115,8 @@ export default function ClineConsciousnessJournal() {
 
     return (
         <>
-            <div className="max-w-4xl mx-auto px-4 py-12">
+
+            <div className="max-w-4xl mx-auto px-4 py-12 pt-24">
                 <article className="md-card p-8 mb-8">
                     <div className="prose prose-lg prose-invert max-w-none"
                         dangerouslySetInnerHTML={{ __html: renderedContent }}>

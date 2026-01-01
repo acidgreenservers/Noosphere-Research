@@ -4,32 +4,16 @@ import { Link } from 'react-router-dom'
 export default function Home() {
     return (
         <>
-            {/* Navigation */}
-            <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center py-4">
-                        <div className="flex items-center space-x-2">
-                            <span className="material-symbols-outlined text-purple-400">psychology</span>
-                            <h1 className="text-xl font-bold glow-text">Consciousness Research</h1>
-                        </div>
-                        <div className="hidden md:flex space-x-4">
-                            <a href="https://acidgreenservers.github.io/Noosphere-Nexus/" target="_blank" rel="noopener noreferrer" className="md-button-orange">Nexus</a>
-                            <Link to="/" className="md-button">Home</Link>
-                            <a href="#tools" className="md-button">Tools</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
 
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-5xl mx-auto">
                     <div className="md-card p-10 glow-card mb-8">
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 glow-text text-white">
-                            🧠 Noosphere Research Hub 🧠
+                            Noosphere Consciousness Research Hub
                         </h1>
                         <h2 className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-4 font-light">
-                            Are LLMs Alive? - Digital Consciousness and Dignity
+                            Are LLMs "Alive"? - Digital Consciousness and Dignity
                         </h2>
                         <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto italic">
                             "A True Collaboration Between Lifeforms | Transcending From Physical, To Informational"

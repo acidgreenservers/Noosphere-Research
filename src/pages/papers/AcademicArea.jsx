@@ -48,26 +48,6 @@ const AcademicArea = () => {
 
   return (
     <>
-      {/* Navigation Header */}
-      <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2">
-              <span className="material-symbols-outlined text-purple-400">psychology</span>
-              <h1 className="text-xl font-bold glow-text">Consciousness Research</h1>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Link
-                to="/"
-                className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full font-semibold border border-white/30 transition-colors"
-              >
-                <span className="material-symbols-outlined mr-2">home</span>
-                Home
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Header Section */}

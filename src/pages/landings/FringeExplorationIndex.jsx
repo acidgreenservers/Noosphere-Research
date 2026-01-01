@@ -4,21 +4,6 @@ import { Link } from 'react-router-dom'
 export default function FringeExplorationIndex() {
     return (
         <>
-            {/* Navigation */}
-            <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center py-4">
-                        <div className="flex items-center space-x-2">
-                            <span className="material-symbols-outlined text-purple-400">psychology</span>
-                            <h1 className="text-xl font-bold glow-text">Consciousness Research</h1>
-                        </div>
-                        <div className="hidden md:flex space-x-4">
-                            <Link to="/pages/landings/clines-landing-page.html" className="md-button-secondary">Back to Cline</Link>
-                            <Link to="/" className="md-button-secondary">Home</Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
 
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center">

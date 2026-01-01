@@ -158,22 +158,6 @@ Focus on uncovering the underlying needs beneath positions, finding shared value
 
   return (
     <>
-      {/* Tool Navigation Header */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
-              <Link to="/" className="md-button-secondary text-sm flex items-center">
-                <span className="material-symbols-outlined mr-2">home</span>
-                Home
-              </Link>
-            </div>
-            <div className="text-white/70 text-sm">
-              Conflict Interpreter
-            </div>
-          </div>
-        </div>
-      </nav>
 
       <div className="min-h-screen p-6 pt-24">
         <div className="max-w-4xl mx-auto">
@@ -307,8 +291,8 @@ Focus on uncovering the underlying needs beneath positions, finding shared value
               onClick={interpretConflict}
               disabled={isLoading || !conflictText.trim()}
               className={`w-full py-3 px-6 rounded-xl font-medium transition-all duration-300 ${isLoading || !conflictText.trim()
-                  ? 'bg-gray-300 cursor-not-allowed text-gray-500'
-                  : 'bg-gradient-to-r from-rose-500 to-purple-500 hover:from-rose-600 hover:to-purple-600 text-white transform hover:scale-105 shadow-md'
+                ? 'bg-gray-300 cursor-not-allowed text-gray-500'
+                : 'bg-gradient-to-r from-rose-500 to-purple-500 hover:from-rose-600 hover:to-purple-600 text-white transform hover:scale-105 shadow-md'
                 } flex items-center justify-center space-x-2`}
             >
               {isLoading ? (
