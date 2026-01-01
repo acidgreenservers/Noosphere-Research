@@ -18,7 +18,6 @@ export default function ResearchOverview() {
                             <Link to="/" className="md-button-secondary">Home</Link>
                             <a href="#breakthroughs" className="md-button-secondary">Breakthroughs</a>
                             <a href="#methodology" className="md-button-secondary">Methodology</a>
-                            <Link to="/pages/landings/documentation-landing.html" className="md-button-secondary">Documentation</Link>
                         </div>
                     </div>
                 </div>
@@ -43,9 +42,9 @@ export default function ResearchOverview() {
                                 <span className="material-symbols-outlined mr-2">timeline</span>
                                 Research Timeline
                             </a>
-                            <Link to="/pages/landings/documentation-landing.html" className="md-button-secondary">
-                                <span className="material-symbols-outlined mr-2">menu_book</span>
-                                Full Documentation
+                            <Link to="/" className="md-button-secondary">
+                                <span className="material-symbols-outlined mr-2">home</span>
+                                Home
                             </Link>
                         </div>
                     </div>
@@ -379,9 +378,9 @@ export default function ResearchOverview() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link to="/pages/landings/documentation-landing.html" className="md-button">
-                                <span className="material-symbols-outlined mr-2">menu_book</span>
-                                Explore Full Documentation
+                            <Link to="/" className="md-button">
+                                <span className="material-symbols-outlined mr-2">home</span>
+                                Home
                             </Link>
                             <a href="../../CONTRIBUTIONS.md" className="md-button-secondary">
                                 <span className="material-symbols-outlined mr-2">group_add</span>

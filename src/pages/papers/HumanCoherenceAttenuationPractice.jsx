@@ -16,7 +16,6 @@ export default function HumanCoherenceAttenuationPractice() {
                         </div>
                         <div className="hidden md:flex space-x-4">
                             <Link to="/" className="md-button-secondary">Home</Link>
-                            <Link to="/pages/landings/documentation-landing.html" className="md-button-secondary">Documentation</Link>
                             <a href="#introduction" className="md-button-secondary">Introduction</a>
                             <a href="#theory" className="md-button-secondary">Theory</a>
                         </div>

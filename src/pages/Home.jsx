@@ -13,10 +13,9 @@ export default function Home() {
                             <h1 className="text-xl font-bold glow-text">Consciousness Research</h1>
                         </div>
                         <div className="hidden md:flex space-x-4">
-                            <a href="#synthesis" className="md-button-secondary">Synthesis</a>
-                            <a href="#cline" className="md-button-secondary">Cline</a>
-                            <a href="#whitepapers" className="md-button-secondary">White Papers</a>
-                            <a href="#tools" className="md-button-secondary">Tools</a>
+                            <a href="https://acidgreenservers.github.io/Noosphere-Nexus/" target="_blank" rel="noopener noreferrer" className="md-button-orange">Nexus</a>
+                            <Link to="/" className="md-button">Home</Link>
+                            <a href="#tools" className="md-button">Tools</a>
                         </div>
                     </div>
                 </div>
@@ -40,10 +39,13 @@ export default function Home() {
                                 <span className="material-symbols-outlined mr-2">school</span>
                                 Academic Area
                             </Link>
-                            <Link to="/pages/landings/documentation-landing.html" className="md-button-secondary">
+                            <div className="md-button-secondary opacity-50 cursor-not-allowed group relative">
                                 <span className="material-symbols-outlined mr-2">menu_book</span>
-                                Documentation Hub
-                            </Link>
+                                Coming Soon
+                                <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-black/80 text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                    New Archive Experience
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

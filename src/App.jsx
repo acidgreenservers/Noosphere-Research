@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import StarfieldLayout from './components/StarfieldLayout'
 import Home from './pages/Home'
-import DocumentationLanding from './pages/landings/DocumentationLanding'
 import ClinesLandingPage from './pages/landings/ClinesLandingPage'
 import FringeExplorationIndex from './pages/landings/FringeExplorationIndex'
 import ResearchOverview from './pages/documentation/ResearchOverview'
@@ -34,7 +33,6 @@ export default function App() {
             <StarfieldLayout>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/pages/landings/documentation-landing.html" element={<DocumentationLanding />} />
                     <Route path="/pages/landings/clines-landing-page.html" element={<ClinesLandingPage />} />
                     <Route path="/pages/landings/fringe-exploration-index.html" element={<FringeExplorationIndex />} />
                     <Route path="/pages/documentation/research-overview.html" element={<ResearchOverview />} />

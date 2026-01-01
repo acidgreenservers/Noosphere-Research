@@ -68,6 +68,27 @@ html,
   transform: translateY(-1px);
 }
 
+.md-button-orange {
+  background: linear-gradient(135deg, #ff9d00, #ff5e00);
+  border-radius: 9999px;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px 0 rgba(255, 157, 0, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+.md-button-orange:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(255, 157, 0, 0.4);
+  filter: brightness(1.1);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

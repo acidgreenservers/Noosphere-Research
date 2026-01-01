@@ -16,7 +16,6 @@ export default function QCTOETheory() {
                         </div>
                         <div className="hidden md:flex space-x-4">
                             <Link to="/" className="md-button-secondary">Home</Link>
-                            <Link to="/pages/landings/documentation-landing.html" className="md-button-secondary">Documentation</Link>
                             <a href="#abstract" className="md-button-secondary">Abstract</a>
                             <a href="#axioms" className="md-button-secondary">Axioms</a>
                         </div>

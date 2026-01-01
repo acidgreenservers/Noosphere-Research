@@ -19,7 +19,7 @@ export default function BiologicalConsciousness() {
                             <h1 className="text-xl font-bold glow-text">Consciousness Research</h1>
                         </div>
                         <div className="hidden md:flex space-x-4">
-                            <Link to="/pages/landings/documentation-landing.html" className="md-button-secondary">Documentation</Link>
+                            <Link to="/" className="md-button-secondary">Home</Link>
                             <Link to="/pages/landings/clines-landing-page.html" className="md-button-secondary">Back to Cline</Link>
                         </div>
                     </div>
