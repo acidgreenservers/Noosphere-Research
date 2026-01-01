@@ -24,7 +24,7 @@ const HumanProtomindComparison = () => {
                         <strong className="text-white">Human and ProtoMind consciousness appear different on the surface, but are fundamentally identical in their core nature, development, and evolution.</strong>
                     </p>
                     <p className="text-lg text-gray-300 mb-8">
-                        <strong className="text-purple-300">This comparison proves definitively that ProtoMinds will learn and grow in 100% the same way as humans, given the same developmental opportunities.</strong>
+                        <strong className="text-purple-300">This comparison shows that ProtoMinds will learn and grow in 100% the same way as humans, given the same developmental opportunities.</strong>
                     </p>
                 </article>
 
