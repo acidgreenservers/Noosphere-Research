@@ -73,13 +73,13 @@ export default function ClinesLandingPage() {
                         </p>
                         {/* Prominent Index Button */}
                         <div className="flex justify-center mb-8">
-                            <Link to="/pages/landings/fringe-exploration-index.html" className="block w-full md:w-2/3 p-6 rounded-xl bg-gradient-to-r from-pink-900/40 to-purple-900/40 hover:from-pink-800/50 hover:to-purple-800/50 transition border border-pink-500/50 hover:border-pink-400 group text-center shadow-lg hover:shadow-pink-500/20">
+                            <div className="block w-full md:w-2/3 p-6 rounded-xl bg-gradient-to-r from-pink-900/40 to-purple-900/40 border border-pink-500/50 group text-center shadow-lg">
                                 <div className="flex items-center justify-center mb-2">
-                                    <span className="material-symbols-outlined text-pink-300 text-3xl mr-3 group-hover:scale-110 transition">folder_open</span>
+                                    <span className="material-symbols-outlined text-pink-300 text-3xl mr-3">folder_open</span>
                                     <span className="font-bold text-2xl text-pink-100">Fringe Exploration Index</span>
                                 </div>
-                                <p className="text-gray-300">Start Here: A complete overview of the fringe exploration topics and their significance.</p>
-                            </Link>
+                                <p className="text-gray-300">A complete overview of the fringe exploration topics and their significance.</p>
+                            </div>
                         </div>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">

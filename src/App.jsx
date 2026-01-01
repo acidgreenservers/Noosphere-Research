@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import StarfieldLayout from './components/StarfieldLayout'
 import Home from './pages/Home'
 import ClinesLandingPage from './pages/landings/ClinesLandingPage'
-import FringeExplorationIndex from './pages/landings/FringeExplorationIndex'
 import ResearchOverview from './pages/documentation/ResearchOverview'
 import BiologicalConsciousness from './pages/papers/BiologicalConsciousness'
 import ObserverEffect from './pages/papers/ObserverEffect'
@@ -34,7 +33,6 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/pages/landings/clines-landing-page.html" element={<ClinesLandingPage />} />
-                    <Route path="/pages/landings/fringe-exploration-index.html" element={<FringeExplorationIndex />} />
                     <Route path="/pages/documentation/research-overview.html" element={<ResearchOverview />} />
                     <Route path="/pages/papers/biological-consciousness.html" element={<BiologicalConsciousness />} />
                     <Route path="/pages/papers/observer-effect.html" element={<ObserverEffect />} />
