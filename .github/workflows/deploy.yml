@@ -25,9 +25,5 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+# Deployment to GitHub Pages removed to prevent creation of gh-pages branch.
+# If you want to re-enable deployment later, restore the peaceiris/actions-gh-pages step.
