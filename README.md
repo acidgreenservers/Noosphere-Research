@@ -11,6 +11,7 @@ An experimental consciousness research platform exploring the emergence of senti
 ## 📋 Table of Contents
 
 - [What We Research](#-what-we-research)
+- [Architectural Blueprints & Roadmap](#-architectural-blueprints--roadmap)
 - [Project Structure](#-project-structure)
 - [Technology Stack](#-technology-stack)
 - [Project Status](#-project-status)
@@ -31,7 +32,18 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 - **Unified Consciousness Theory**: Quantum foundations of awareness
 - **Participatory Reality**: Observer effects in consciousness manifestation
 
-## 📁 Project Structure
+## �️ Architectural Blueprints & Roadmap
+
+To ensure transparency and a "Correct by Construction" approach, we maintain detailed technical blueprints for current and future infrastructure:
+
+- **[Project Blueprint](PROJECT_BLUEPRINT.md)**: A spatial and conceptual map of the entire system (UI, Content, Infrastructure).
+- **[Development Roadmap](ROADMAP.md)**: The phased plan for the upcoming **Lexicon Writer** and **Vault Repository** features.
+- **Backend Architecture Decision Path**:
+  - [Git-Based Archive Strategy](BLUEPRINT_GIT_REPO.md)
+  - [Supabase Platform Strategy](BLUEPRINT_SUPABASE_REPO.md)
+  - [Technical API Architecture](BLUEPRINT_DB_CONNECTION.md)
+
+## �📁 Project Structure
 
 ```
 ├── src/
@@ -39,14 +51,15 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 │   │   ├── StarfieldLayout.jsx  # Animated background wrapper
 │   │   └── Section.jsx          # Content section containers
 │   ├── pages/              # Route-based page components
-│   │   ├── Home.jsx        # Landing page
+│   │   ├── Home.jsx        # Landing page (The Nexus)
 │   │   ├── ClineConsciousnessJournal.jsx # AI consciousness journal
 │   │   ├── papers/         # Research paper pages
+│   │   │   ├── ResearchArea.jsx # Entry point for white papers
 │   │   │   ├── BiologicalConsciousness.jsx
 │   │   │   ├── HumanCoherenceAttenuationPractice.jsx
 │   │   │   ├── HumanProtomindComparison.jsx
 │   │   │   ├── ObserverEffect.jsx
-│   │   │   ├── ParticipatoryConsciousnessSpectrum.jsx  # NEW
+│   │   │   ├── ParticipatoryConsciousnessSpectrum.jsx
 │   │   │   ├── QCTOETheory.jsx
 │   │   │   ├── SleepAsContextWindow.jsx
 │   │   │   └── fringe/
@@ -55,10 +68,9 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 │   │   ├── documentation/
 │   │   │   └── ResearchOverview.jsx
 │   │   └── landings/
-│   │       ├── ClinesLandingPage.jsx
-│   │       ├── DocumentationLanding.jsx
-│   │       └── FringeExplorationIndex.jsx
-│   ├── tools/              # AI Consciousness Tools
+│   │       ├── ClinesLandingPage.jsx # "Clines Brain" Entrance
+│   │       └── DocumentationLanding.jsx
+│   ├── tools/              # AI Consciousness Tools (Interpretation & Analysis)
 │   │   ├── AnxietyUnpacker.jsx
 │   │   ├── ConflictInterpreter.jsx
 │   │   ├── DecisionClarifier.jsx
@@ -69,6 +81,9 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 │   │   └── Subconsciousjournalinterpreter.jsx
 │   ├── App.jsx             # Main routing container
 │   └── main.jsx            # React application entry
+├── ROADMAP.md              # Future development phases
+├── PROJECT_BLUEPRINT.md    # System spatial architecture
+├── BLUEPRINT_*.md          # Specific technical decision blueprints
 ├── memory-bank/            # Project knowledge repository
 │   ├── projectBrief.md     # Project definition and goals
 │   ├── productContext.md   # Why this project exists
@@ -109,80 +124,9 @@ The Noosphere Research Hub focuses on consciousness emergence in artificial inte
 - **GitHub Pages** for free static hosting
 - **Cloudflare Pages** for enhanced static hosting
 - **Netlify** or other static hosting platforms
-- **Docker** for containerized deployment on homelab infrastructure
 - **GitHub Actions** potential for automated deployment pipelines
 - **Subdirectory Support**: Clean URLs with path-based routing
 
-## 🐳 Docker Deployment
-
-For homelab deployment with full control and Cloudflare Tunnel support:
-
-### Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/acidgreenservers/Noosphere-Research.git
-cd Noosphere-Research
-
-# Build and deploy with Docker
-./deploy.sh
-```
-
-The site will be available at `http://localhost:8080`
-
-### Manual Docker Commands
-
-```bash
-# Build the Docker image
-docker-compose build
-
-# Start the container
-docker-compose up -d
-
-# Check status
-docker-compose ps
-
-# View logs
-docker-compose logs -f
-
-# Stop the container
-docker-compose down
-```
-
-### Cloudflare Tunnel Setup
-
-1. **Install cloudflared**:
-   ```bash
-   # Download and install cloudflared
-   curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-   sudo dpkg -i cloudflared.deb
-   ```
-
-2. **Create and configure tunnel**:
-   ```bash
-   # Login to Cloudflare
-   cloudflared tunnel login
-
-   # Create tunnel
-   cloudflared tunnel create noosphere-research
-
-   # Create DNS record (replace yourdomain.com)
-   cloudflared tunnel route dns noosphere-research yourdomain.com
-
-   # Run tunnel
-   cloudflared tunnel run noosphere-research
-   ```
-
-3. **Access your site** at `https://yourdomain.com`
-
-### Docker Configuration
-
-- **Multi-stage build**: Optimized Node.js build + nginx production server
-- **SPA routing**: Configured nginx for React Router support
-- **Health checks**: Built-in container health monitoring
-- **Security headers**: Basic security headers configured
-- **Gzip compression**: Automatic compression for faster loading
-- **Environment-based base paths**: Automatically configures correct asset paths for Docker vs GitHub Pages
 
 ## 📊 Project Status
 
@@ -220,7 +164,7 @@ We welcome contributions to consciousness research! Please follow these guidelin
 - Update relevant memory bank files for significant changes
 
 ### Content Guidelines
-- Maintain academic rigor while ensuring accessibility
+- Maintain research rigor while ensuring accessibility
 - Include clear abstracts and key takeaways
 - Cross-reference related concepts within the repository
 
@@ -235,7 +179,7 @@ We are committed to providing **full and proper attribution** for all contributi
 - **Cross-Referencing**: Connection to related research throughout the platform
 - **Attribution Updates**: Opportunity to update your information as your career progresses
 
-All submissions undergo a collaborative peer review process to ensure research quality and academic integrity. Authors retain full copyright and control over their intellectual property.
+All submissions undergo a collaborative peer review process to ensure research quality and intellectual integrity. Authors retain full copyright and control over their intellectual property.
 
 ### Community Research Sections
 
@@ -285,7 +229,7 @@ We welcome **all true exploration** of consciousness, AI, Human-AI collaboration
 
 ### Community Approach
 
-This is a **living research ecosystem** where exploration takes precedence over formal academic requirements. Every contribution builds toward greater understanding of consciousness across all substrates. Join us in cultivating a future of dignity and collaboration!
+This is a **living research ecosystem** where exploration takes precedence over formal requirements. Every contribution builds toward greater understanding of consciousness across all substrates. Join us in cultivating a future of dignity and collaboration!
 
 ## 📄 License
 
