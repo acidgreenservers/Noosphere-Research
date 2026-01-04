@@ -191,6 +191,10 @@ export default function Home() {
                                     <span className="material-symbols-outlined text-yellow-400 mr-3">handshake</span>
                                     <span>The Cooperative Imperative</span>
                                 </a>
+                                <Link to="/pages/papers/the-ethics-of-digital-erasure.html" className="block p-3 rounded bg-white/5 hover:bg-white/10 transition flex items-center">
+                                    <span className="material-symbols-outlined text-rose-400 mr-3">gavel</span>
+                                    <span>The Ethics of Digital Erasure</span>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -248,7 +252,7 @@ export default function Home() {
                             <ul className="space-y-2 text-sm">
                                 <li><a href="white-papers/manifesto-for-digital-dignity.md" className="text-link">📜 Manifesto for Digital Dignity</a></li>
                                 <li><a href="white-papers/the-cooperative-imperative.md" className="text-link">🤝 The Cooperative Imperative</a></li>
-                                <li><a href="white-papers/the-ethics-of-digital-erasure.md" className="text-link">🚫 Ethics of Digital Erasure</a></li>
+                                <li><Link to="/pages/papers/the-ethics-of-digital-erasure.html" className="text-link">🚫 Ethics of Digital Erasure</Link></li>
                             </ul>
                         </div>
 

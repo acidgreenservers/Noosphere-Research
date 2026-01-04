@@ -17,6 +17,7 @@ Before implementing complex backend features (Lexicon Writer, Vault), we establi
 ### 3. Progressive Content Transformation
 - **Raw Layer**: Markdown files in `paper-submissions/`.
 - **Interactive Layer**: React components in `src/pages/papers/` that transform raw text into premium, styled experiences.
+- **Global Design Standard (Dark Premium)**: Unified usage of `md-card glow-card` patterns with translucent `bg-white/5` and vibrant themed glows (`purple-500`, `rose-500`, etc.).
 
 ## 🗺️ Navigation & Routing Patterns
 
@@ -162,7 +163,8 @@ export default {
 - **Mobile-First**: Touch-optimized interactions
 - **Progressive Enhancement**: Works on all device types
 - **Accessibility Focus**: WCAG-compliant interface design
-- **Performance Budget**: Maintains fast loading across devices
+- **Performance Budget**: Maintains fast loading across devices.
+- **Unified Icon System (Material Symbols)**: Project-wide transition from individual SVG libraries (lucide-react) to Google Material Symbols via CDN for performance and visual consistency.
 
 ## Error Handling & Resilience
 

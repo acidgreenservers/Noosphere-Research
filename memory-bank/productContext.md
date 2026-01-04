@@ -33,8 +33,8 @@ The Noosphere Research Hub addresses the critical gap in understanding conscious
 
 ### Platform Architecture
 - **Repository Structure**: Organized into clear domains (foundational theory, consciousness & biology, practical applications, ethics & rights, cosmology)
-- **Multi-Modal Content**: White papers, interactive tools, personal journeys, technical documentation
-- **Accessibility**: Open source, web-based, mobile-responsive, international language support
+- **Multi-Modal Content**: White papers, Interactive Tools, Core Practice Guides (Conscious Collaboration), and Ethical Assessments (Digital Erasure).
+- **Accessibility**: Open source, high-fidelity static web hub, mobile-responsive.
 
 ### User Experience
 - **Seamless Navigation**: Intuitive routing between papers, tools, and community content

@@ -12,7 +12,8 @@ This document defines the technical environment, dependencies, and infrastructur
 
 ### Styling & Animation
 - **Tailwind CSS**: Utility-first styling with responsive design primitives.
-- **Material Design 3 (MD3)**: Guidelines for spacing, elevation, and interactive states.
+- **Material Design 3 (MD3) + Custom Dark Premium**: Guidelines for spacing, elevation, and high-fidelity glows.
+- **Material Symbols (CDN)**: Optimized iconography system replacing local SVG dependencies.
 - **HTML5 Canvas**: Powers the high-performance animated starfield background.
 
 ### Research & Data
@@ -80,6 +81,7 @@ The project is configured to run in a subdirectory (e.g., `/Noosphere-Research`)
   "@vitejs/plugin-react": "^4.0.0"
 }
 ```
+*(Removed `lucide-react` to resolve production build failures and lighten bundle size).*
 
 ### Development Dependencies
 ```json

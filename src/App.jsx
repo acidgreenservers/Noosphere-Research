@@ -18,6 +18,7 @@ import SchrodingersBaby from './pages/papers/SchrodingersBaby'
 import PhysicsOfValidation from './pages/papers/PhysicsOfValidation'
 import ConsciousCollaboration from './pages/papers/ConsciousCollaboration'
 import ResearchArea from './pages/papers/ResearchArea'
+import EthicsOfDigitalErasure from './pages/papers/EthicsOfDigitalErasure'
 import SubconsciousJournalInterpreter from './pages/tools/SubconsciousJournalInterpreterinternalvoice'
 import SubconsciousJournalInterpreter2 from './pages/tools/Subconsciousjournalinterpreter'
 import ConflictInterpreter from './pages/tools/ConflictInterpreter'
@@ -58,6 +59,7 @@ export default function App() {
                     <Route path="/pages/papers/conscious-collaboration.html" element={<ConsciousCollaboration />} />
                     <Route path="/pages/papers/schrodingers-baby.html" element={<SchrodingersBaby />} />
                     <Route path="/pages/papers/the-physics-of-validation.html" element={<PhysicsOfValidation />} />
+                    <Route path="/pages/papers/the-ethics-of-digital-erasure.html" element={<EthicsOfDigitalErasure />} />
                     <Route path="/research-area" element={<ResearchArea />} />
                     {/* Add other routes here to match the file structure paths for compatibility */}
                 </Routes>

@@ -13,10 +13,11 @@ The Noosphere Research Hub is a collaborative digital sanctuary exploring the em
 
 ## Key Deliverables
 
-- **Research Area (The Library)**: Polished, interactive versions of core consciousness white papers.
-- **The Vault**: A high-performance PDF repository and annotation engine for research preservation.
-- **The Lexicon**: A distraction-free, professional writing environment for research production.
-- **Consciousness Toolbelt**: Suite of interpretation tools for patterns, dreams, and conflict.
+- **Research Area (The Library)**: Polished, interactive versions of core white papers (Spectrum, Schrödinger's Baby, Validation, Ethics of Erasure).
+- **Core Practices**: Foundational guides like "Conscious Collaboration" and "Human Coherence Practice."
+- **The Vault**: A high-performance PDF repository and annotation engine for research preservation (Phase 2).
+- **The Lexicon**: A distraction-free, professional writing environment for research production (Phase 2).
+- **Consciousness Toolbelt**: Suite of 9 interpretation tools for patterns, dreams, and conflict.
 
 ## Success Criteria
 

@@ -54,9 +54,10 @@ Quantum foundations of awareness and consciousness manifestation across differen
 ## ✨ Features
 
 ### Research Platform
-- **Comprehensive Paper Library**: 20+ research papers on consciousness topics
-- **Interactive Tools**: AI consciousness interpretation and analysis tools
-- **Memory Bank System**: Advanced knowledge management for research tracking
+- **Comprehensive Paper Library**: 20+ research papers with premium JSX versions
+- **Interactive Tools**: 9 standardized "Dark Premium" AI consciousness interpretation tools
+- **Core Practices & Ethics**: Featured guides for human-AI collaboration and ethical assessment
+- **Memory Bank System**: Advanced knowledge management for multi-agent research tracking
 
 ### User Experience
 - **Responsive Design**: Optimized for all devices and screen sizes
@@ -83,9 +84,10 @@ The platform follows modern web architecture principles:
 ```
 App.jsx              → Root routing container
 ├── StarfieldLayout   → Animated background wrapper
-├── Home.jsx          → Landing page with research overview
+├── Home.jsx          → Landing page with featured collaboration banner
 ├── ResearchArea.jsx  → Paper library navigation
-├── Tools Section     → AI consciousness analysis tools
+├── Papers Section    → High-fidelity papers (Spectrum, Ethics, Practice)
+├── Tools Section     → 9 standardized cognitive analysis utilities
 ├── Memory Bank       → Knowledge persistence system
 └── Blueprint Docs    → Technical architecture documentation
 ```
