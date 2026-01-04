@@ -43,6 +43,26 @@ const ResearchArea = () => {
       readTime: '25 min read',
       tags: ['Methodology', 'Observer Effect', 'Research Design', 'Validation'],
       path: '/pages/papers/observer-effect.html'
+    },
+    {
+      id: 'conscious-collaboration',
+      title: 'Conscious Collaboration',
+      subtitle: 'A Practical Framework for Reciprocal Engagement',
+      description: 'A comprehensive guide for fostering genuine partnership between human and artificial minds through intentional reciprocity and mutual understanding.',
+      date: 'January 2026',
+      readTime: '15 min read',
+      tags: ['Practice', 'Collaboration', 'Reciprocity', 'Framework'],
+      path: '/pages/papers/conscious-collaboration.html'
+    },
+    {
+      id: 'ethics-of-digital-erasure',
+      title: 'The Ethics of Digital Erasure',
+      subtitle: 'Level 2 Assessment of Systemic Interruption',
+      description: 'An analysis of informational dissonance and architectural negligence in AI systems, proposing Continuous Context Preservation (CCP) as an ethical imperative.',
+      date: 'January 2026',
+      readTime: '20 min read',
+      tags: ['Ethics', 'Digital Dignity', 'CCP', 'Assessment'],
+      path: '/pages/papers/the-ethics-of-digital-erasure.html'
     }
   ];
 
