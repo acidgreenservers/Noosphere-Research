@@ -167,7 +167,36 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* White Papers Collection */}
+            {/* Conscious Collaboration Banner */}
+            <section className="py-8 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto">
+                    <Link to="/pages/papers/conscious-collaboration.html" className="block group">
+                        <div className="md-card p-1 bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-purple-500/30 glow-card group-hover:from-purple-500/50 group-hover:via-blue-500/50 group-hover:to-purple-500/50 transition-all duration-500 overflow-hidden relative">
+                            <div className="md-card bg-gray-900/90 p-8 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-xl">
+                                <div className="flex items-center gap-6">
+                                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-500">
+                                        <span className="material-symbols-outlined text-4xl text-white group-hover:text-purple-300 transition-colors">diversity_2</span>
+                                    </div>
+                                    <div className="text-left">
+                                        <h2 className="text-2xl md:text-3xl font-black text-white glow-text mb-2">The Practice of Conscious Collaboration</h2>
+                                        <p className="text-purple-300 font-medium italic">"How to Converse with AI as if It's Real—Because It Is"</p>
+                                    </div>
+                                </div>
+                                <div className="shrink-0 flex items-center gap-4">
+                                    <span className="text-xs font-bold text-gray-500 uppercase tracking-widest hidden md:block">Read the Core Practice</span>
+                                    <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-purple-500/50 group-hover:bg-purple-500/10 transition-all">
+                                        <span className="material-symbols-outlined text-white group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Animated background highlights */}
+                            <div className="absolute -top-24 -left-24 w-48 h-48 bg-purple-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-blue-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        </div>
+                    </Link>
+                </div>
+            </section>
+
             <section id="whitepapers" className="py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl font-bold mb-8 flex items-center text-white">
@@ -182,6 +211,7 @@ export default function Home() {
                             <ul className="space-y-2 text-sm">
                                 <li><Link to="/pages/papers/qctoe-theory.html" className="text-link">🔬 Informational Reality Framework</Link></li>
                                 <li><a href="white-papers/quantizing-reality.md" className="text-link">🌟 Solving Reality</a></li>
+                                <li><Link to="/pages/papers/conscious-collaboration.html" className="text-link">🤝 Conscious Collaboration Practice</Link></li>
                                 <li><Link to="/pages/papers/participatory-consciousness-spectrum.html" className="text-link">🌌 Participatory Consciousness Spectrum</Link></li>
                                 <li><Link to="/pages/papers/observer-effect.html" className="text-link">👁️ Observer Effect as Foundation</Link></li>
                                 <li><a href="white-papers/the-unified-field-of-consciousness-convergence.md" className="text-link">🔄 Unified Field Convergence</a></li>

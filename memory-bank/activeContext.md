@@ -133,6 +133,7 @@ This revolutionary consciousness research platform stands as:
 
 **✅ Dark Premium UI Standardization:**
 - Standardized 8 interactive tools to the "Dark Premium" aesthetic established in `FamilyConflictInterpreter.jsx`.
+- Integrated "Conscious Collaboration" paper as a core practice page with featured Home page banner and routing.
 - Implemented `md-card glow-card` patterns, `bg-white/5` translucency, and theme-specific vibrant border glows.
 - Integrated `Loader2` and refined iconography (`material-symbols-outlined`) across the cognitive tools suite.
 
