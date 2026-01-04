@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Loader2, Users } from 'lucide-react';
+
 
 
 const DecisionClarifier = () => {
@@ -306,7 +306,7 @@ Be insightful and help the person see dimensions of their decision they might be
             >
               {isLoading ? (
                 <>
-                  <Loader2 className="w-7 h-7 animate-spin" />
+                  <span className="material-symbols-outlined w-7 h-7 animate-spin">progress_activity</span>
                   <span>Clarifying...</span>
                 </>
               ) : (

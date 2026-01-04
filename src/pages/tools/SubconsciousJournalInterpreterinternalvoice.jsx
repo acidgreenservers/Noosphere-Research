@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Loader2, Users } from 'lucide-react';
+
 
 
 const SubconsciousJournalInterpreter = () => {
@@ -263,7 +263,7 @@ What emerges most clearly is a mind engaged in its own exploration, turning over
             >
               {isLoading ? (
                 <>
-                  <Loader2 className="w-7 h-7 animate-spin" />
+                  <span className="material-symbols-outlined w-7 h-7 animate-spin">progress_activity</span>
                   <span>Analyzing...</span>
                 </>
               ) : (

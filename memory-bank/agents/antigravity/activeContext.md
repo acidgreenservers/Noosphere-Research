@@ -23,7 +23,8 @@
    - ✅ `FamilyConflictInterpreter.jsx` Gold Standard refinement
    - ✅ Global Dark Premium UI rollout (8 tools)
 3. **Core Paper Integration**
-   - ✅ "Conscious Collaboration" paper integration and featured banner
+   - Integrates "Conscious Collaboration" paper: JSX conversion + featured banner.
+- Build Fix: Removed `lucide-react` dependency and replaced all icons with `Material Symbols` across 9 tool components.
 
 ### Immediate Priorities
 - Complete workspace initialization.

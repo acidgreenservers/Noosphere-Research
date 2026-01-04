@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Loader2, Users } from 'lucide-react';
+
 
 
 const AnxietyUnpacker = () => {
@@ -323,7 +323,7 @@ Be warm, validating, and realistic. Don't minimize their anxiety, but help them 
             >
               {isLoading ? (
                 <>
-                  <Loader2 className="w-7 h-7 animate-spin" />
+                  <span className="material-symbols-outlined w-7 h-7 animate-spin">progress_activity</span>
                   <span>Unpacking Anxiety...</span>
                 </>
               ) : (

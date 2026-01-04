@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Loader2, Users } from 'lucide-react';
+
 
 
 const RelationshipConflictInterpreter = () => {
@@ -361,12 +361,12 @@ Be deeply insightful, fair to both perspectives, and focused on helping them und
             >
               {isLoading ? (
                 <>
-                  <Loader2 className="w-7 h-7 animate-spin" />
+                  <span className="material-symbols-outlined w-7 h-7 animate-spin">progress_activity</span>
                   <span>Interpreting Dynamics...</span>
                 </>
               ) : (
                 <>
-                  <Users className="w-7 h-7 group-hover:rotate-12 transition-transform" />
+                  <span className="material-symbols-outlined w-7 h-7 group-hover:rotate-12 transition-transform">group</span>
                   <span>Interpret Relationship Dynamics</span>
                 </>
               )}

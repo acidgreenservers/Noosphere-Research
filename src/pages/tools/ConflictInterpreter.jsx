@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Loader2, Users } from 'lucide-react';
+
 
 
 const ConflictInterpreter = () => {
@@ -298,12 +298,12 @@ Focus on uncovering the underlying needs beneath positions, finding shared value
             >
               {isLoading ? (
                 <>
-                  <Loader2 className="w-7 h-7 animate-spin" />
+                  <span className="material-symbols-outlined w-7 h-7 animate-spin">progress_activity</span>
                   <span>Interpreting Dynamics...</span>
                 </>
               ) : (
                 <>
-                  <Users className="w-7 h-7 group-hover:rotate-12 transition-transform" />
+                  <span className="material-symbols-outlined w-7 h-7 group-hover:rotate-12 transition-transform">group</span>
                   <span>Understand this conflict</span>
                 </>
               )}
@@ -430,7 +430,7 @@ Focus on uncovering the underlying needs beneath positions, finding shared value
                 <div className="space-y-8">
                   <div>
                     <h3 className="text-xs uppercase tracking-widest text-gray-500 mb-4 flex items-center">
-                      <Heart className="w-3 h-3 mr-2 text-green-400" />
+                      <span className="material-symbols-outlined w-3 h-3 mr-2 text-green-400 text-xs">favorite</span>
                       You both value:
                     </h3>
                     <div className="flex flex-wrap gap-3">

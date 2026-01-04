@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Loader2, Users, Plus, Trash2 } from 'lucide-react';
+
 
 const FamilyConflictInterpreter = () => {
   const [motherText, setMotherText] = useState('');
@@ -358,7 +358,7 @@ Be deeply insightful about family systems - roles, triangulations, patterns, gen
               onClick={addChild}
               className="md-button px-6 py-2 text-sm"
             >
-              <Plus className="w-4 h-4 mr-2" />
+              <span className="material-symbols-outlined mr-2 text-sm">add</span>
               <span>Add Child</span>
             </button>
           </div>
@@ -382,7 +382,7 @@ Be deeply insightful about family systems - roles, triangulations, patterns, gen
                       className="p-2 text-gray-500 hover:text-rose-400 hover:bg-rose-400/10 rounded-full transition-all"
                       title="Remove Child"
                     >
-                      <Trash2 className="w-5 h-5" />
+                      <span className="material-symbols-outlined text-xl">delete</span>
                     </button>
                   )}
                 </div>
@@ -403,18 +403,18 @@ Be deeply insightful about family systems - roles, triangulations, patterns, gen
             onClick={interpretConflict}
             disabled={isLoading || !allFieldsFilled}
             className={`w-full py-5 px-8 rounded-full font-bold transition-all duration-500 flex items-center justify-center gap-3 text-xl group overflow-hidden relative ${isLoading || !allFieldsFilled
-                ? 'bg-white/5 border border-white/10 text-gray-500 cursor-not-allowed'
-                : 'md-button shadow-xl shadow-purple-500/20 active:scale-95 hover:scale-[1.02]'
+              ? 'bg-white/5 border border-white/10 text-gray-500 cursor-not-allowed'
+              : 'md-button shadow-xl shadow-purple-500/20 active:scale-95 hover:scale-[1.02]'
               }`}
           >
             {isLoading ? (
               <>
-                <Loader2 className="w-7 h-7 animate-spin" />
+                <span className="material-symbols-outlined w-7 h-7 animate-spin">progress_activity</span>
                 <span>Interpreting Family Dynamics...</span>
               </>
             ) : (
               <>
-                <Users className="w-7 h-7 group-hover:rotate-12 transition-transform" />
+                <span className="material-symbols-outlined w-7 h-7 group-hover:rotate-12 transition-transform">group</span>
                 <span>Interpret Family Conflict</span>
               </>
             )}
@@ -582,7 +582,7 @@ Be deeply insightful about family systems - roles, triangulations, patterns, gen
                 </h2>
                 <p className="text-gray-200 leading-relaxed font-light mb-8">{interpretation.hiddenAlliances}</p>
                 <h3 className="text-xs uppercase tracking-widest text-gray-500 mb-4 flex items-center">
-                  <Heart className="w-3 h-3 mr-2 text-green-400" />
+                  <span className="material-symbols-outlined w-3 h-3 mr-2 text-green-400 text-xs">favorite</span>
                   Shared Foundational Values
                 </h3>
                 <div className="flex flex-wrap gap-2">
