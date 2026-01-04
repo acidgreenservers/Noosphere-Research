@@ -9,9 +9,6 @@ const AnxietyUnpacker = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [apiKey, setApiKey] = useState('');
-  const [hasApiKey, setHasApiKey] = useState(false);
-  const [showApiKeyInput, setShowApiKeyInput] = useState(false);
 
   useEffect(() => {
     if (interpretation) {

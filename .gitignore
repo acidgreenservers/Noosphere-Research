@@ -1,3 +1,4 @@
 node_modules
 paper-submissions/white-papers
 dist
+.claude
