@@ -382,6 +382,14 @@ export default function Home() {
                                 </Link>
                             </div>
                             <div className="md-card p-6 glow-card bg-black/20">
+                                <h3 className="text-xl font-semibold text-orange-400 mb-2">Family Conflict Interpreter</h3>
+                                <p className="text-gray-400 mb-4">AI-powered family therapy mapping systemic dynamics, alliances, and generational patterns.</p>
+                                <Link to="/family-conflict-interpreter" className="md-button text-sm">
+                                    <span className="material-symbols-outlined mr-1">family_restroom</span>
+                                    Try Tool
+                                </Link>
+                            </div>
+                            <div className="md-card p-6 glow-card bg-black/20">
                                 <h3 className="text-xl font-semibold text-orange-300 mb-2">Dream Interpreter</h3>
                                 <p className="text-gray-400 mb-4">AI-powered dream analysis revealing themes, symbols, and personal insights from your subconscious mind.</p>
                                 <Link to="/dream-interpreter" className="md-button text-sm">

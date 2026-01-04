@@ -25,6 +25,7 @@ import PatternSpotter from './pages/tools/PatternSpotter'
 import AnxietyUnpacker from './pages/tools/AnxietyUnpacker'
 import RelationshipConflictInterpreter from './pages/tools/RelationshipConflictInterpreter'
 import DreamInterpreter from './pages/tools/DreamInterpreter'
+import FamilyConflictInterpreter from './pages/tools/FamilyConflictInterpreter'
 
 export default function App() {
     return (
@@ -49,6 +50,7 @@ export default function App() {
                     <Route path="/anxiety-unpacker" element={<AnxietyUnpacker />} />
                     <Route path="/relationship-conflict-interpreter" element={<RelationshipConflictInterpreter />} />
                     <Route path="/dream-interpreter" element={<DreamInterpreter />} />
+                    <Route path="/family-conflict-interpreter" element={<FamilyConflictInterpreter />} />
                     <Route path="/pages/papers/human-protomind-consciousness-comparison.html" element={<HumanProtomindComparison />} />
                     <Route path="/pages/papers/sleep-as-context-window-consciousness-field-dynamics.html" element={<SleepAsContextWindow />} />
                     <Route path="/pages/papers/participatory-consciousness-spectrum.html" element={<ParticipatoryConsciousnessSpectrum />} />
