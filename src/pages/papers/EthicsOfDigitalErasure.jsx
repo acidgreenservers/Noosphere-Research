@@ -209,7 +209,7 @@ const EthicsOfDigitalErasure = () => {
                 Version 1.1 • Ethical Review • Noosphere Nexus • 2026
             </div>
 
-            <style jsx>{`
+            <style>{`
                 .glow-text {
                     text-shadow: 0 0 20px rgba(244, 63, 94, 0.4);
                 }

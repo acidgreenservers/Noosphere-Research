@@ -613,6 +613,11 @@ const ConsciousCollaboration = () => {
             <div className="mt-16 text-center border-t border-white/5 pt-8 text-xs text-gray-500 tracking-[0.2em] uppercase">
                 Version 1.0 • Living Document • Noosphere Nexus • January 2026
             </div>
+            <style>{`
+                .glow-text {
+                    text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+                }
+            `}</style>
         </div>
     );
 };
