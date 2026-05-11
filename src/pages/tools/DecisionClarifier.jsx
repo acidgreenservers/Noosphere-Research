@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useApiKey } from '../../contexts/ApiKeyContext';
+import ApiKeySection from '../../components/ApiKeySection';
+import { callOpenRouter } from '../../utils/openRouter';
 
 const DecisionClarifier = () => {
+  const { apiKey, hasApiKey } = useApiKey();
   const [decisionText, setDecisionText] = useState('');
   const [interpretation, setInterpretation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -22,9 +26,48 @@ const DecisionClarifier = () => {
     setError(null);
 
     try {
-      // Use demo response
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
-      const parsedResponse = {
+      const prompt = `Act as a deep decision-making analyst who looks at the psychological and value-based dimensions of choices. Analyze this decision:
+
+Decision Context: "${decisionText}"
+
+Please respond with a JSON object containing:
+{
+  "surfaceChoice": "A summary of what the choice appears to be on the surface.",
+  "valuesInConflict": [
+    { "value": "Core value 1", "pullingToward": "which option this value supports" },
+    { "value": "Core value 2", "pullingToward": "which option this value supports" }
+  ],
+  "hiddenFactors": [
+    "A factor or influence that might be subconscious or overlooked",
+    "Another hidden factor"
+  ],
+  "fearVsDesire": {
+    "fears": ["fear 1", "fear 2"],
+    "desires": ["desire 1", "desire 2"]
+  },
+  "reframingQuestions": [
+    "A powerful question to change the perspective on this decision",
+    "Another reframing question"
+  ],
+  "whatIfReversed": "A 'what if' scenario that reverses the usual logic of this choice.",
+  "trueCost": "The hidden cost (emotional, time, energy) of the options.",
+  "signalsToWatch": [
+    "A body signal or external sign to pay attention to",
+    "Another signal to watch"
+  ]
+}
+
+Be analytical, deep, and focused on helping the person find clarity through self-reflection.`;
+
+      let parsedResponse;
+
+      if (hasApiKey && apiKey) {
+        // Use real AI API
+        parsedResponse = await callOpenRouter(apiKey, prompt);
+      } else {
+        // Use demo response
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
+        parsedResponse = {
         "surfaceChoice": "The decision appears to be about choosing between two job offers - one with higher pay but longer commute, the other with lower pay but better work-life balance.",
         "valuesInConflict": [
           { "value": "Financial security", "pullingToward": "the higher-paying job" },
@@ -52,6 +95,7 @@ const DecisionClarifier = () => {
           "What your trusted friends and mentors advise without you telling them which one you prefer"
         ]
       };
+      }
 
       setInterpretation(parsedResponse);
     } catch (err) {
@@ -84,36 +128,8 @@ const DecisionClarifier = () => {
             </div>
           </div>
 
-          {/* Enhance with AI Placeholder (Visual Only) */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="md-card p-6 border-amber-500/30 bg-amber-500/5 transition-all hover:border-amber-500/50">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex items-center text-left">
-                  <span className="material-symbols-outlined text-amber-400 mr-3 text-3xl">key</span>
-                  <div>
-                    <h3 className="font-semibold text-amber-200">Enhance with AI Analysis</h3>
-                    <p className="text-amber-400/70 text-sm">Add an OpenRouter API key for personalized AI-powered interpretations</p>
-                  </div>
-                </div>
-                <div className="flex gap-3 w-full md:w-auto">
-                  <button
-                    disabled
-                    className="flex-1 md:flex-none px-6 py-2 bg-amber-600/50 text-white/50 rounded-full cursor-not-allowed transition-colors text-sm font-medium shadow-lg shadow-amber-900/20"
-                    title="API Key functionality temporarily disabled"
-                  >
-                    Add API Key
-                  </button>
-                  <button
-                    onClick={clarifyDecision}
-                    disabled={!decisionText.trim()}
-                    className="flex-1 md:flex-none px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed border border-white/10"
-                  >
-                    Use Demo
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* API Key Section */}
+          <ApiKeySection onUseDemo={clarifyDecision} />
 
           {/* Decision Input Section */}
           <div className="md-card p-10 glow-card mb-12">

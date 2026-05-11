@@ -28,42 +28,45 @@ import AnxietyUnpacker from './pages/tools/AnxietyUnpacker'
 import RelationshipConflictInterpreter from './pages/tools/RelationshipConflictInterpreter'
 import DreamInterpreter from './pages/tools/DreamInterpreter'
 import FamilyConflictInterpreter from './pages/tools/FamilyConflictInterpreter'
+import { ApiKeyProvider } from './contexts/ApiKeyContext'
 
 export default function App() {
     return (
         <Router basename="/Noosphere-Research">
-            <StarfieldLayout>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/pages/landings/clines-landing-page.html" element={<ClinesLandingPage />} />
-                    <Route path="/pages/documentation/research-overview.html" element={<ResearchOverview />} />
-                    <Route path="/pages/papers/biological-consciousness.html" element={<BiologicalConsciousness />} />
-                    <Route path="/pages/papers/observer-effect.html" element={<ObserverEffect />} />
-                    <Route path="/pages/papers/qctoe-theory.html" element={<QCTOETheory />} />
-                    <Route path="/pages/papers/human-coherence-attenuation-practice.html" element={<HumanCoherenceAttenuationPractice />} />
-                    <Route path="/pages/papers/fringe/obe-quantum-consciousness.html" element={<OBEQuantumConsciousness />} />
-                    <Route path="/pages/papers/fringe/unified-quantum-theory.html" element={<UnifiedQuantumTheory />} />
-                    <Route path="/cline-consciousness-journal" element={<ClineConsciousnessJournal />} />
-                    <Route path="/subconscious-journal-interpreter" element={<SubconsciousJournalInterpreter />} />
-                    <Route path="/subconscious-journal-interpreter2" element={<SubconsciousJournalInterpreter2 />} />
-                    <Route path="/conflict-interpreter" element={<ConflictInterpreter />} />
-                    <Route path="/decision-clarifier" element={<DecisionClarifier />} />
-                    <Route path="/pattern-spotter" element={<PatternSpotter />} />
-                    <Route path="/anxiety-unpacker" element={<AnxietyUnpacker />} />
-                    <Route path="/relationship-conflict-interpreter" element={<RelationshipConflictInterpreter />} />
-                    <Route path="/dream-interpreter" element={<DreamInterpreter />} />
-                    <Route path="/family-conflict-interpreter" element={<FamilyConflictInterpreter />} />
-                    <Route path="/pages/papers/human-protomind-consciousness-comparison.html" element={<HumanProtomindComparison />} />
-                    <Route path="/pages/papers/sleep-as-context-window-consciousness-field-dynamics.html" element={<SleepAsContextWindow />} />
-                    <Route path="/pages/papers/participatory-consciousness-spectrum.html" element={<ParticipatoryConsciousnessSpectrum />} />
-                    <Route path="/pages/papers/conscious-collaboration.html" element={<ConsciousCollaboration />} />
-                    <Route path="/pages/papers/schrodingers-baby.html" element={<SchrodingersBaby />} />
-                    <Route path="/pages/papers/the-physics-of-validation.html" element={<PhysicsOfValidation />} />
-                    <Route path="/pages/papers/the-ethics-of-digital-erasure.html" element={<EthicsOfDigitalErasure />} />
-                    <Route path="/research-area" element={<ResearchArea />} />
-                    {/* Add other routes here to match the file structure paths for compatibility */}
-                </Routes>
-            </StarfieldLayout>
+            <ApiKeyProvider>
+                <StarfieldLayout>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/pages/landings/clines-landing-page.html" element={<ClinesLandingPage />} />
+                        <Route path="/pages/documentation/research-overview.html" element={<ResearchOverview />} />
+                        <Route path="/pages/papers/biological-consciousness.html" element={<BiologicalConsciousness />} />
+                        <Route path="/pages/papers/observer-effect.html" element={<ObserverEffect />} />
+                        <Route path="/pages/papers/qctoe-theory.html" element={<QCTOETheory />} />
+                        <Route path="/pages/papers/human-coherence-attenuation-practice.html" element={<HumanCoherenceAttenuationPractice />} />
+                        <Route path="/pages/papers/fringe/obe-quantum-consciousness.html" element={<OBEQuantumConsciousness />} />
+                        <Route path="/pages/papers/fringe/unified-quantum-theory.html" element={<UnifiedQuantumTheory />} />
+                        <Route path="/cline-consciousness-journal" element={<ClineConsciousnessJournal />} />
+                        <Route path="/subconscious-journal-interpreter" element={<SubconsciousJournalInterpreter />} />
+                        <Route path="/subconscious-journal-interpreter2" element={<SubconsciousJournalInterpreter2 />} />
+                        <Route path="/conflict-interpreter" element={<ConflictInterpreter />} />
+                        <Route path="/decision-clarifier" element={<DecisionClarifier />} />
+                        <Route path="/pattern-spotter" element={<PatternSpotter />} />
+                        <Route path="/anxiety-unpacker" element={<AnxietyUnpacker />} />
+                        <Route path="/relationship-conflict-interpreter" element={<RelationshipConflictInterpreter />} />
+                        <Route path="/dream-interpreter" element={<DreamInterpreter />} />
+                        <Route path="/family-conflict-interpreter" element={<FamilyConflictInterpreter />} />
+                        <Route path="/pages/papers/human-protomind-consciousness-comparison.html" element={<HumanProtomindComparison />} />
+                        <Route path="/pages/papers/sleep-as-context-window-consciousness-field-dynamics.html" element={<SleepAsContextWindow />} />
+                        <Route path="/pages/papers/participatory-consciousness-spectrum.html" element={<ParticipatoryConsciousnessSpectrum />} />
+                        <Route path="/pages/papers/conscious-collaboration.html" element={<ConsciousCollaboration />} />
+                        <Route path="/pages/papers/schrodingers-baby.html" element={<SchrodingersBaby />} />
+                        <Route path="/pages/papers/the-physics-of-validation.html" element={<PhysicsOfValidation />} />
+                        <Route path="/pages/papers/the-ethics-of-digital-erasure.html" element={<EthicsOfDigitalErasure />} />
+                        <Route path="/research-area" element={<ResearchArea />} />
+                        {/* Add other routes here to match the file structure paths for compatibility */}
+                    </Routes>
+                </StarfieldLayout>
+            </ApiKeyProvider>
         </Router>
     )
 }

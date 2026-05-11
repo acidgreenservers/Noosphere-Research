@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useApiKey } from '../../contexts/ApiKeyContext';
+import ApiKeySection from '../../components/ApiKeySection';
+import { callOpenRouter } from '../../utils/openRouter';
 
 const StageComponent = (stage, idx) => (
   <div key={idx} className="bg-white/5 p-6 rounded-2xl border border-white/5 group hover:bg-white/10 transition-colors">
@@ -16,6 +19,7 @@ const StageComponent = (stage, idx) => (
 );
 
 const PatternSpotter = () => {
+  const { apiKey, hasApiKey } = useApiKey();
   const [situationText, setSituationText] = useState('');
   const [interpretation, setInterpretation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -37,10 +41,51 @@ const PatternSpotter = () => {
     setError(null);
 
     try {
-      // Simulate API delay for demo feel
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const prompt = `Act as a systemic analyst and psychological pattern spotter. Analyze this recurring situation and help reveal the underlying cycle, roles, and leverage points for change.
 
-      const mockResponse = {
+Situation Description: "${situationText}"
+
+Please respond with a JSON object containing:
+{
+  "corePattern": "A concise description of the central recurring pattern discovered.",
+  "triggerPoints": [
+    { "trigger": "What starts the cycle", "why": "The psychological reason this is a trigger" },
+    { "trigger": "Another trigger", "why": "The reason why" }
+  ],
+  "yourRole": "A description of the role the person plays in this pattern (e.g., The Fixer, The Martyr, The Avoidant).",
+  "systemicDynamics": [
+    "A description of how the system reinforces itself",
+    "Another systemic dynamic"
+  ],
+  "whatStaysHidden": "The core belief or fear that keeps this pattern operating out of sight.",
+  "secondaryGains": [
+    "A hidden benefit or protection this pattern provides",
+    "Another secondary gain"
+  ],
+  "theLoop": {
+    "stage1": "How it starts (anxiety, need, etc.)",
+    "stage2": "The initial action or engagement",
+    "stage3": "How it escalates or reinforces",
+    "stage4": "The breakdown or reset point"
+  },
+  "leveragePoints": [
+    { "point": "A specific moment where a different choice could be made", "how": "Exactly what to do differently" },
+    { "point": "Another leverage point", "how": "What to do" }
+  ],
+  "deeperQuestion": "A profound question for deep self-reflection."
+}
+
+Be analytical, systemic, and psychologically insightful.`;
+
+      let parsedResponse;
+
+      if (hasApiKey && apiKey) {
+        // Use real AI API
+        parsedResponse = await callOpenRouter(apiKey, prompt);
+      } else {
+        // Use demo response
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        parsedResponse = {
         "corePattern": "You repeatedly enter relationships where you give excessively while receiving little in return, creating a cycle of emotional depletion followed by desperate attempts to 'fix' the dynamic.",
         "triggerPoints": [
           { "trigger": "Meeting someone who seems 'needy' or 'damaged'", "why": "This activates your rescuer role and gives you a sense of purpose and control" },
@@ -70,8 +115,9 @@ const PatternSpotter = () => {
         ],
         "deeperQuestion": "What would it mean for you to believe that you deserve to be cared for exactly as much as you care for others?"
       };
+      }
 
-      setInterpretation(mockResponse);
+      setInterpretation(parsedResponse);
     } catch (err) {
       setError(err.message || 'Unable to spot the pattern. Please try again.');
       console.error('Error spotting pattern:', err);
@@ -102,36 +148,8 @@ const PatternSpotter = () => {
             </div>
           </div>
 
-          {/* Enhance with AI Placeholder (Visual Only) */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="md-card p-6 border-amber-500/30 bg-amber-500/5 transition-all hover:border-amber-500/50">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex items-center text-left">
-                  <span className="material-symbols-outlined text-amber-400 mr-3 text-3xl">key</span>
-                  <div>
-                    <h3 className="font-semibold text-amber-200">Enhance with AI Analysis</h3>
-                    <p className="text-amber-400/70 text-sm">Add an OpenRouter API key for personalized AI-powered interpretations</p>
-                  </div>
-                </div>
-                <div className="flex gap-3 w-full md:w-auto">
-                  <button
-                    disabled
-                    className="flex-1 md:flex-none px-6 py-2 bg-amber-600/50 text-white/50 rounded-full cursor-not-allowed transition-colors text-sm font-medium shadow-lg shadow-amber-900/20"
-                    title="API Key functionality temporarily disabled"
-                  >
-                    Add API Key
-                  </button>
-                  <button
-                    onClick={spotPattern}
-                    disabled={!situationText.trim()}
-                    className="flex-1 md:flex-none px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed border border-white/10"
-                  >
-                    Use Demo
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* API Key Section */}
+          <ApiKeySection onUseDemo={spotPattern} />
 
           {/* Input Section */}
           <div className="md-card p-10 glow-card mb-12">

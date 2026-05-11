@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useApiKey } from '../../contexts/ApiKeyContext';
+import ApiKeySection from '../../components/ApiKeySection';
+import { callOpenRouter } from '../../utils/openRouter';
 
 const FamilyConflictInterpreter = () => {
+  const { apiKey, hasApiKey } = useApiKey();
   const [motherText, setMotherText] = useState('');
   const [fatherText, setFatherText] = useState('');
   const [children, setChildren] = useState([{ id: 1, name: 'Child 1', text: '' }]);
@@ -43,9 +47,63 @@ const FamilyConflictInterpreter = () => {
     setError(null);
 
     try {
-      // Use demo response
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      const parsedResponse = {
+      const childrenPerspectives = children.map(c => `${c.name}: "${c.text}"`).join('\n');
+      const prompt = `Act as a systemic family therapist. Analyze these different perspectives on a family conflict and help reveal the underlying system, needs, alliances, and a path toward repair.
+
+Mother's Perspective: "${motherText}"
+Father's Perspective: "${fatherText}"
+Children's Perspectives:
+${childrenPerspectives}
+
+Please respond with a JSON object containing:
+{
+  "whatsBeneathTheSurface": "A deep, systemic summary of what this family conflict is really about.",
+  "mother": {
+    "underlyingNeeds": ["need1", "need2"],
+    "emotions": ["emotion1", "emotion2"],
+    "whatTheyreReallySaying": "The core message behind her words.",
+    "roleInFamily": "Her systemic role in this dynamic.",
+    "reflectionForThem": "A gentle reflection for her."
+  },
+  "father": {
+    "underlyingNeeds": ["need1", "need2"],
+    "emotions": ["emotion1", "emotion2"],
+    "whatTheyreReallySaying": "The core message behind his words.",
+    "roleInFamily": "His systemic role in this dynamic.",
+    "reflectionForThem": "A gentle reflection for him."
+  },
+  "children": [
+    {
+      "name": "Child name",
+      "underlyingNeeds": ["need1", "need2"],
+      "emotions": ["emotion1", "emotion2"],
+      "whatTheyreReallySaying": "The core message behind their words.",
+      "impactOnThem": "How this dynamic is affecting them.",
+      "reflectionForThem": "A gentle reflection for them."
+    }
+  ],
+  "familyPattern": "A description of the recurring family cycle.",
+  "generationalDynamics": "Possible roots in previous generations.",
+  "hiddenAlliances": "Description of any hidden alliances or triangulation.",
+  "sharedValues": ["value1", "value2"],
+  "repairPathForFamily": [
+    "Step 1 for family repair",
+    "Step 2 for family repair"
+  ],
+  "invitationToGrowth": "A final profound invitation for the family system to grow."
+}
+
+Be systemic, balanced, and focused on the health of the entire family unit.`;
+
+      let parsedResponse;
+
+      if (hasApiKey && apiKey) {
+        // Use real AI API
+        parsedResponse = await callOpenRouter(apiKey, prompt);
+      } else {
+        // Use demo response
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        parsedResponse = {
         "whatsBeneathTheSurface": "This conflict is really about unmet needs for connection and validation within the family system. Each member is expressing their pain through different behaviors, but they're all seeking the same fundamental things: to feel heard, valued, and emotionally safe.",
         "mother": {
           "underlyingNeeds": ["emotional support", "appreciation", "family harmony"],
@@ -82,6 +140,7 @@ const FamilyConflictInterpreter = () => {
         ],
         "invitationToGrowth": "What if this conflict could become an opportunity for your family to grow closer and understand each other better? What would it look like to approach this challenge as a team rather than as opponents?"
       };
+      }
 
       setInterpretation(parsedResponse);
     } catch (err) {
@@ -112,36 +171,8 @@ const FamilyConflictInterpreter = () => {
           </div>
         </div>
 
-        {/* Enhance with AI Placeholder (Visual Only) */}
-        <div className="max-w-4xl mx-auto mb-8">
-          <div className="md-card p-6 border-amber-500/30 bg-amber-500/5 transition-all hover:border-amber-500/50">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="flex items-center text-left">
-                <span className="material-symbols-outlined text-amber-400 mr-3 text-3xl">key</span>
-                <div>
-                  <h3 className="font-semibold text-amber-200">Enhance with AI Analysis</h3>
-                  <p className="text-amber-400/70 text-sm">Add an OpenRouter API key for personalized AI-powered interpretations</p>
-                </div>
-              </div>
-              <div className="flex gap-3 w-full md:w-auto">
-                <button
-                  disabled
-                  className="flex-1 md:flex-none px-6 py-2 bg-amber-600/50 text-white/50 rounded-full cursor-not-allowed transition-colors text-sm font-medium shadow-lg shadow-amber-900/20"
-                  title="API Key functionality temporarily disabled"
-                >
-                  Add API Key
-                </button>
-                <button
-                  onClick={interpretConflict}
-                  disabled={!allFieldsFilled}
-                  className="flex-1 md:flex-none px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed border border-white/10"
-                >
-                  Use Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* API Key Section */}
+        <ApiKeySection onUseDemo={interpretConflict} />
 
         {/* Family Input Section */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
