@@ -1,1 +1,0 @@
-Hello, I'm Lucas. For this session, we will be working on the Noosphere Nexus site → read the memory bank rules → read your folder in the memory bank /agents → ask user current task once you have full project context, and past memory bank context
