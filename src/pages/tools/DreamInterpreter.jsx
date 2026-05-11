@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useApiKey } from '../../contexts/ApiKeyContext';
+import ApiKeySection from '../../components/ApiKeySection';
+import { callOpenRouter } from '../../utils/openRouter';
 
 const DreamInterpreter = () => {
+  const { apiKey, hasApiKey } = useApiKey();
   const [dreamText, setDreamText] = useState('');
   const [interpretation, setInterpretation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -22,9 +26,32 @@ const DreamInterpreter = () => {
     setError(null);
 
     try {
-      // Use demo response
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
-      const parsedResponse = {
+      const prompt = `Act as a depth psychologist and dream analyst. Analyze this dream description and help reveal its hidden meanings, symbols, and personal insights.
+
+Dream: "${dreamText}"
+
+Please respond with a JSON object containing:
+{
+  "mainThemes": ["theme1", "theme2"],
+  "emotionalTone": "A description of the dream's overall feeling and atmosphere.",
+  "symbols": [
+    { "symbol": "symbol name", "meaning": "psychological interpretation" }
+  ],
+  "personalInsight": "A deep reflection on what this dream might be communicating to the dreamer's waking life.",
+  "guidance": "Gentle suggestions for further reflection or action based on the dream."
+}
+
+Be soulful, mysterious but grounded, and focused on the subconscious language of symbols.`;
+
+      let parsedResponse;
+
+      if (hasApiKey && apiKey) {
+        // Use real AI API
+        parsedResponse = await callOpenRouter(apiKey, prompt);
+      } else {
+        // Use demo response
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
+        parsedResponse = {
         "mainThemes": ["transformation", "exploration", "emotional release"],
         "emotionalTone": "A mix of wonder and gentle anxiety, with an underlying current of hope and curiosity about what lies ahead",
         "symbols": [
@@ -35,6 +62,7 @@ const DreamInterpreter = () => {
         "personalInsight": "This dream suggests you're in a period of significant personal growth and exploration. The act of flying through clouds represents your desire to rise above current challenges and see things from a higher perspective, while the water elements indicate you're ready to dive deeper into your emotions and subconscious patterns.",
         "guidance": "Consider what areas of your life feel 'stuck' or need fresh perspective. The dream encourages you to trust your ability to navigate uncertainty and explore the unknown with courage and curiosity."
       };
+      }
 
       setInterpretation(parsedResponse);
     } catch (err) {
@@ -67,36 +95,8 @@ const DreamInterpreter = () => {
             </div>
           </div>
 
-          {/* Enhance with AI Placeholder (Visual Only) */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="md-card p-6 border-amber-500/30 bg-amber-500/5 transition-all hover:border-amber-500/50">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex items-center text-left">
-                  <span className="material-symbols-outlined text-amber-400 mr-3 text-3xl">key</span>
-                  <div>
-                    <h3 className="font-semibold text-amber-200">Enhance with AI Analysis</h3>
-                    <p className="text-amber-400/70 text-sm">Add an OpenRouter API key for personalized AI-powered interpretations</p>
-                  </div>
-                </div>
-                <div className="flex gap-3 w-full md:w-auto">
-                  <button
-                    disabled
-                    className="flex-1 md:flex-none px-6 py-2 bg-amber-600/50 text-white/50 rounded-full cursor-not-allowed transition-colors text-sm font-medium shadow-lg shadow-amber-900/20"
-                    title="API Key functionality temporarily disabled"
-                  >
-                    Add API Key
-                  </button>
-                  <button
-                    onClick={interpretDream}
-                    disabled={!dreamText.trim()}
-                    className="flex-1 md:flex-none px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed border border-white/10"
-                  >
-                    Use Demo
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* API Key Section */}
+          <ApiKeySection onUseDemo={interpretDream} />
 
           {/* Dream Input Section */}
           <div className="md-card p-10 glow-card mb-12">

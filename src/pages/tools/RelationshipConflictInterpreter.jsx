@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useApiKey } from '../../contexts/ApiKeyContext';
+import ApiKeySection from '../../components/ApiKeySection';
+import { callOpenRouter } from '../../utils/openRouter';
 
 const RelationshipConflictInterpreter = () => {
+  const { apiKey, hasApiKey } = useApiKey();
   const [person1Text, setPerson1Text] = useState('');
   const [person2Text, setPerson2Text] = useState('');
   const [person1Name, setPerson1Name] = useState('Person 1');
@@ -25,9 +29,54 @@ const RelationshipConflictInterpreter = () => {
     setError(null);
 
     try {
-      // Use demo response
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
-      const parsedResponse = {
+      const prompt = `Act as a compassionate couples therapist and systemic analyst. Analyze these two perspectives on a relationship conflict and help reveal the underlying dynamics, needs, and a path toward repair.
+
+Perspective 1 (${person1Name}): "${person1Text}"
+Perspective 2 (${person2Name}): "${person2Text}"
+
+Please respond with a JSON object containing:
+{
+  "whatsBeneathTheSurface": "A deep, compassionate summary of what this conflict is really about beyond the surface details.",
+  "person1": {
+    "name": "${person1Name}",
+    "underlyingNeeds": ["need1", "need2"],
+    "emotions": ["emotion1", "emotion2"],
+    "whatTheyreReallySaying": "The core emotional message behind their words.",
+    "blindSpots": ["A dynamic or impact they might be missing", "Another blind spot"],
+    "reflectionForThem": "A gentle, personal reflection for ${person1Name}."
+  },
+  "person2": {
+    "name": "${person2Name}",
+    "underlyingNeeds": ["need1", "need2"],
+    "emotions": ["emotion1", "emotion2"],
+    "whatTheyreReallySaying": "The core emotional message behind their words.",
+    "blindSpots": ["A dynamic or impact they might be missing", "Another blind spot"],
+    "reflectionForThem": "A gentle, personal reflection for ${person2Name}."
+  },
+  "thePatternAtPlay": "A description of the cyclical dynamic between them (e.g., pursuer-distancer).",
+  "whereYouActuallyAgree": "The shared goals or values that both partners have in common.",
+  "bridgeStatements": {
+    "forPerson1ToSay": "A specific statement for ${person1Name} to open the door to connection.",
+    "forPerson2ToSay": "A specific statement for ${person2Name} to open the door to connection."
+  },
+  "theRepairPath": [
+    "Step 1 for repair",
+    "Step 2 for repair"
+  ],
+  "deeperInvitation": "A final, profound invitation for both partners to grow together."
+}
+
+Be balanced, insightful, and focused on building empathy and understanding between both people.`;
+
+      let parsedResponse;
+
+      if (hasApiKey && apiKey) {
+        // Use real AI API
+        parsedResponse = await callOpenRouter(apiKey, prompt);
+      } else {
+        // Use demo response
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
+        parsedResponse = {
         "whatsBeneathTheSurface": "This conflict is really about both partners feeling unseen and unheard in their relationship, with each person desperately wanting to feel valued and understood by the other, but expressing it through frustration and criticism rather than vulnerability.",
         "person1": {
           "name": person1Name,
@@ -59,6 +108,7 @@ const RelationshipConflictInterpreter = () => {
         ],
         "deeperInvitation": "What if this conflict isn't about who's right or wrong, but about two people who both deeply care about each other and want to love each other better? What if you could approach each other from that place of shared caring, even in the middle of disagreement?"
       };
+      }
 
       setInterpretation(parsedResponse);
     } catch (err) {
@@ -85,36 +135,8 @@ const RelationshipConflictInterpreter = () => {
             </div>
           </div>
 
-          {/* Enhance with AI Placeholder (Visual Only) */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="md-card p-6 border-amber-500/30 bg-amber-500/5 transition-all hover:border-amber-500/50">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex items-center text-left">
-                  <span className="material-symbols-outlined text-amber-400 mr-3 text-3xl">key</span>
-                  <div>
-                    <h3 className="font-semibold text-amber-200">Enhance with AI Analysis</h3>
-                    <p className="text-amber-400/70 text-sm">Add an OpenRouter API key for personalized AI-powered interpretations</p>
-                  </div>
-                </div>
-                <div className="flex gap-3 w-full md:w-auto">
-                  <button
-                    disabled
-                    className="flex-1 md:flex-none px-6 py-2 bg-amber-600/50 text-white/50 rounded-full cursor-not-allowed transition-colors text-sm font-medium shadow-lg shadow-amber-900/20"
-                    title="API Key functionality temporarily disabled"
-                  >
-                    Add API Key
-                  </button>
-                  <button
-                    onClick={interpretConflict}
-                    disabled={!person1Text.trim() || !person2Text.trim()}
-                    className="flex-1 md:flex-none px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed border border-white/10"
-                  >
-                    Use Demo
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* API Key Section */}
+          <ApiKeySection onUseDemo={interpretConflict} />
 
           {/* Input Sections */}
           <div className="grid md:grid-cols-2 gap-8 mb-8">

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useApiKey } from '../../contexts/ApiKeyContext';
+import ApiKeySection from '../../components/ApiKeySection';
+import { callOpenRouter } from '../../utils/openRouter';
 
 const ConflictInterpreter = () => {
+  const { apiKey, hasApiKey } = useApiKey();
   const [conflictText, setConflictText] = useState('');
   const [interpretation, setInterpretation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -22,9 +26,46 @@ const ConflictInterpreter = () => {
     setError(null);
 
     try {
-      // Use demo response
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
-      const parsedResponse = {
+      const prompt = `Act as a neutral, compassionate conflict mediator. Analyze this description of a conflict and help both parties understand each other's underlying needs and find a path forward.
+
+Conflict: "${conflictText}"
+
+Please respond with a JSON object containing:
+{
+  "surfaceIssue": "A concise summary of what the argument appears to be about on the surface.",
+  "person1": {
+    "underlyingNeeds": ["need1", "need2"],
+    "emotions": ["emotion1", "emotion2"],
+    "perspective": "A compassionate summary of Person 1's experience and what they truly want."
+  },
+  "person2": {
+    "underlyingNeeds": ["need1", "need2"],
+    "emotions": ["emotion1", "emotion2"],
+    "perspective": "A compassionate summary of Person 2's experience and what they truly want."
+  },
+  "sharedValues": ["value1", "value2"],
+  "hiddenCommonGround": "The deeper connection or shared goal that both parties might be missing.",
+  "bridgeStatements": [
+    "A statement Person 1 could say to Person 2 to build a bridge",
+    "A statement Person 2 could say to Person 1 to build a bridge"
+  ],
+  "nextSteps": [
+    "Concrete, actionable step 1",
+    "Concrete, actionable step 2"
+  ]
+}
+
+Be balanced, validating to both sides, and focused on needs-based communication.`;
+
+      let parsedResponse;
+
+      if (hasApiKey && apiKey) {
+        // Use real AI API
+        parsedResponse = await callOpenRouter(apiKey, prompt);
+      } else {
+        // Use demo response
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
+        parsedResponse = {
         "surfaceIssue": "The argument appears to be about household chores and fairness in dividing responsibilities.",
         "person1": {
           "underlyingNeeds": ["respect", "partnership", "appreciation"],
@@ -47,6 +88,7 @@ const ConflictInterpreter = () => {
           "Create a shared list of household tasks and discuss preferences for who handles what, being open to compromise"
         ]
       };
+      }
 
       setInterpretation(parsedResponse);
     } catch (err) {
@@ -79,36 +121,8 @@ const ConflictInterpreter = () => {
             </div>
           </div>
 
-          {/* Enhance with AI Placeholder (Visual Only) */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="md-card p-6 border-amber-500/30 bg-amber-500/5 transition-all hover:border-amber-500/50">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex items-center text-left">
-                  <span className="material-symbols-outlined text-amber-400 mr-3 text-3xl">key</span>
-                  <div>
-                    <h3 className="font-semibold text-amber-200">Enhance with AI Analysis</h3>
-                    <p className="text-amber-400/70 text-sm">Add an OpenRouter API key for personalized AI-powered interpretations</p>
-                  </div>
-                </div>
-                <div className="flex gap-3 w-full md:w-auto">
-                  <button
-                    disabled
-                    className="flex-1 md:flex-none px-6 py-2 bg-amber-600/50 text-white/50 rounded-full cursor-not-allowed transition-colors text-sm font-medium shadow-lg shadow-amber-900/20"
-                    title="API Key functionality temporarily disabled"
-                  >
-                    Add API Key
-                  </button>
-                  <button
-                    onClick={interpretConflict}
-                    disabled={!conflictText.trim()}
-                    className="flex-1 md:flex-none px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed border border-white/10"
-                  >
-                    Use Demo
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* API Key Section */}
+          <ApiKeySection onUseDemo={interpretConflict} />
 
           {/* Conflict Input Section */}
           <div className="md-card p-10 glow-card mb-8">

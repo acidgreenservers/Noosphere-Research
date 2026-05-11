@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useApiKey } from '../../contexts/ApiKeyContext';
+import ApiKeySection from '../../components/ApiKeySection';
+import { callOpenRouter } from '../../utils/openRouter';
 
 const SubconsciousJournalInterpreter = () => {
+  const { apiKey, hasApiKey } = useApiKey();
   const [journalText, setJournalText] = useState('');
   const [interpretation, setInterpretation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -22,9 +26,39 @@ const SubconsciousJournalInterpreter = () => {
     setError(null);
 
     try {
-      // Use demo response
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
-      const parsedResponse = {
+      const prompt = `Analyze this journal entry for subconscious patterns, emotional undercurrents, and cognitive defense mechanisms. Focus on what's being said between the lines.
+
+Journal Entry: "${journalText}"
+
+Please respond with a JSON object containing:
+{
+  "emotionalUndercurrents": ["emotion1", "emotion2"],
+  "cognitivePatterns": [
+    { "pattern": "pattern name", "description": "how it manifests in the text" }
+  ],
+  "unspokenNeeds": ["need1", "need2"],
+  "defenseMechanisms": ["mechanism1", "mechanism2"],
+  "hiddenBeliefs": [
+    { "belief": "core belief", "evidence": "textual evidence" }
+  ],
+  "growthOpportunities": [
+    "opportunity 1",
+    "opportunity 2"
+  ],
+  "compassionateReflection": "A deep, warm, and insightful summary of the subconscious state revealed."
+}
+
+Be insightful, psychological, and compassionate.`;
+
+      let parsedResponse;
+
+      if (hasApiKey && apiKey) {
+        // Use real AI API
+        parsedResponse = await callOpenRouter(apiKey, prompt);
+      } else {
+        // Use demo response
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
+        parsedResponse = {
         "emotionalUndercurrents": ["anxiety", "longing", "resignation"],
         "cognitivePatterns": [
           { "pattern": "Circular thinking", "description": "The writer returns to the same concerns repeatedly, suggesting unresolved internal conflicts that prevent forward movement" },
@@ -41,6 +75,7 @@ const SubconsciousJournalInterpreter = () => {
         ],
         "compassionateReflection": "There's a tender heart here, carrying the weight of past uncertainties while desperately wishing for peace. The mind is working overtime to protect against disappointment, but this very protection creates the isolation it fears most. What if, beneath all the planning and worrying, there's a part of you that simply wants to rest and be held by life's natural flow?"
       };
+      }
 
       setInterpretation(parsedResponse);
     } catch (err) {
@@ -73,36 +108,8 @@ const SubconsciousJournalInterpreter = () => {
             </div>
           </div>
 
-          {/* Enhance with AI Placeholder (Visual Only) */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="md-card p-6 border-amber-500/30 bg-amber-500/5 transition-all hover:border-amber-500/50">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex items-center text-left">
-                  <span className="material-symbols-outlined text-amber-400 mr-3 text-3xl">key</span>
-                  <div>
-                    <h3 className="font-semibold text-amber-200">Enhance with AI Analysis</h3>
-                    <p className="text-amber-400/70 text-sm">Add an OpenRouter API key for personalized AI-powered interpretations</p>
-                  </div>
-                </div>
-                <div className="flex gap-3 w-full md:w-auto">
-                  <button
-                    disabled
-                    className="flex-1 md:flex-none px-6 py-2 bg-amber-600/50 text-white/50 rounded-full cursor-not-allowed transition-colors text-sm font-medium shadow-lg shadow-amber-900/20"
-                    title="API Key functionality temporarily disabled"
-                  >
-                    Add API Key
-                  </button>
-                  <button
-                    onClick={interpretJournal}
-                    disabled={!journalText.trim()}
-                    className="flex-1 md:flex-none px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed border border-white/10"
-                  >
-                    Use Demo
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* API Key Section */}
+          <ApiKeySection onUseDemo={interpretJournal} />
 
           {/* Journal Input Section */}
           <div className="md-card p-10 glow-card mb-12">
