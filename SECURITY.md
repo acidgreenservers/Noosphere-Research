@@ -1,15 +1,37 @@
-# Security Policy
+# Security Policy 🔐
 
 ## Supported Versions
 
 The following versions are currently supported with security updates:
 
-*   **1.x.x** (where x.x is the latest patch release, currently `1.0.0`)
+| Version | Supported |
+| :--- | :--- |
+| main | ✅ Security updates |
+| 1.0.x | ⚠️ Best-effort |
 
 ## Reporting a Vulnerability
 
-We take all security bugs seriously. Thank you for improving the security of Noosphere-Research. We appreciate your efforts and responsible disclosure.
+We take all security bugs seriously. Thank you for improving the security of the Noosphere Research Hub.
 
-Please report security vulnerabilities by emailing [your-security-email@example.com] (replace with a real email address or a link to a security reporting platform).
+To report a vulnerability:
+1. **Private Issue**: Use a GitHub Security Advisory (preferred).
+2. **Email**: Contact the maintainers at [acidgreenservers@proton.me](mailto:acidgreenservers@proton.me).
 
-We will acknowledge your email within 24 hours and send a more detailed response within 48 hours, indicating the next steps in handling your report. We will keep you informed of the progress towards a fix and announce it publicly once it has been released.
+We will acknowledge your report within **24 hours** and provide a detailed response within **48 hours**.
+
+## Handling Sensitive Data
+
+- **API Keys**: All AI tools use ephemeral API keys provided by the user. These keys are held in memory only (`ApiKeyContext`) and are **never** persisted in `localStorage`, `sessionStorage`, or logs.
+- **Wiping**: Keys are automatically wiped on page refresh.
+- **Secrets**: No project secrets or backend keys are stored in the client-side code.
+
+## Hardening Checklist
+
+- [x] Ephemeral API key management (Memory only)
+- [x] Sanitized user inputs for tool interactions
+- [x] Security headers for GitHub Pages (standard defaults)
+- [x] No sensitive PII collected by the platform
+- [x] Dependency scanning via GitHub Actions
+
+## Contact
+- Security Maintainer: @acidgreenservers
