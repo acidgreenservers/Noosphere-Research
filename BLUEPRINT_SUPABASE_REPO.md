@@ -54,7 +54,7 @@ Logic Flow:
 | Characteristic | Git-Based Repository | Supabase Repository |
 | :--- | :--- | :--- |
 | **Data Speed** | Slower (Limited by build/fetch) | **Instant** (High-speed SQL) |
-| **Complex Search**| Difficult (Fuzzy search only) | **Powerhouse** (Full-text search) |
+| **Complex Search** | Difficult (Fuzzy search only) | **Powerhouse** (Full-text search) |
 | **Analytics** | Hard to track views/downloads | **Built-in** stats and logs |
 | **Ownership** | You own every file in Git | SubP owns the server; you own data |
 | **Scalability** | Good for 100s of papers | Good for **Millions** of papers |

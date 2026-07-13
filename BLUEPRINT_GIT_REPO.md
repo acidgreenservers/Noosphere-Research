@@ -49,7 +49,8 @@ Logic Flow:
 4. DELIVERY: The site now includes the new paper in its JSON index.
 ```
 
-## Why this works for a Research Hub:
+## Why this works for a Research Hub
+
 1. **Verifiable History:** Science requires a paper trail. Git provides a cryptographic history of every edit and submission.
 2. **Low Maintenance:** You don't need to pay for a database or manage server security.
 3. **Collaboration:** Other researchers can submit papers via Pull Requests directly if they are technical, or via your UI if they aren't.

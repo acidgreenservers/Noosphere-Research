@@ -13,15 +13,16 @@ The following versions are currently supported with security updates:
 
 We take all security bugs seriously. Thank you for improving the security of the Noosphere Research Hub.
 
-To report a vulnerability:
-1. **Private Issue**: Use a GitHub Security Advisory (preferred).
+### To report a vulnerability
+
+1. **Private Issue**: Use a [GitHub Security Advisory](https://github.com/acidgreenservers/Noosphere-Research/security/advisories/new) (preferred).
 2. **Email**: Contact the maintainers at [acidgreenservers@proton.me](mailto:acidgreenservers@proton.me).
 
 We will acknowledge your report within **24 hours** and provide a detailed response within **48 hours**.
 
 ## Handling Sensitive Data
 
-- **API Keys**: All AI tools use ephemeral API keys provided by the user. These keys are held in memory only (`ApiKeyContext`) and are **never** persisted in `localStorage`, `sessionStorage`, or logs.
+- **API Keys**: All AI tools use ephemeral API keys provided by the user via OpenRouter. These keys are held in memory only (`ApiKeyContext`) and are **never** persisted in `localStorage`, `sessionStorage`, or logs.
 - **Wiping**: Keys are automatically wiped on page refresh.
 - **Secrets**: No project secrets or backend keys are stored in the client-side code.
 
@@ -34,4 +35,5 @@ We will acknowledge your report within **24 hours** and provide a detailed respo
 - [x] Dependency scanning via GitHub Actions
 
 ## Contact
-- Security Maintainer: @acidgreenservers
+
+- **Security Maintainer**: @acidgreenservers
