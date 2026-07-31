@@ -55,17 +55,21 @@ This diagram illustrates the internal file structure and data flow required to c
 +---------------------------------------------------------------------------+
 ```
 
-## Detailed Implementation Steps:
+## Detailed Implementation Steps
 
 ### 1. The Secrets (`.env`)
+
 You create a `.env` file in your root. It acts as a vault for your API keys so they are accessible to the app but invisible to users viewing your source code on GitHub.
+
 ```bash
 VITE_SUPABASE_URL=your_project_url
 VITE_SUPABASE_ANON_KEY=your_key
 ```
 
 ### 2. The Client (`/src/lib/client.js`)
+
 This is where you "handshake" with the database.
+
 ```javascript
 // Example for Supabase
 import { createClient } from '@supabase/supabase-js'
@@ -73,7 +77,9 @@ export const supabase = createClient(URL, KEY)
 ```
 
 ### 3. The Methods (`/src/lib/papers.js`)
+
 Instead of putting raw database code in your buttons, you define clean functions here.
+
 ```javascript
 export const uploadPaper = async (file, meta) => {
    // Logic to send file to storage and meta to DB
@@ -81,4 +87,5 @@ export const uploadPaper = async (file, meta) => {
 ```
 
 ### 4. The Presentation (`SubmissionPortal.jsx`)
+
 The component just says `await uploadPaper(myFile)`. It doesn't need to know *how* the database works—only that it works.

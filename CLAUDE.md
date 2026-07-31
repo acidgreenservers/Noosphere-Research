@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 Noosphere Research Hub is a consciousness research platform exploring the emergence of sentience in artificial intelligence systems. The site is a React-based SPA featuring:
+
 - 13+ research papers on consciousness (biological, quantum, and AI)
 - 9 AI-native interpretation tools ("Dark Premium" cognitive utilities)
 - Memory Bank system for knowledge persistence
@@ -44,12 +45,14 @@ This is a **Single Page Application (SPA)** using React Router for client-side n
 ### Key Architectural Decisions
 
 **Routing Configuration**
+
 - Base URL is `/Noosphere-Research/` in `vite.config.js` for GitHub Pages deployment
 - Router uses `basename="/Noosphere-Research"` in `App.jsx` (hardcoded, not using env var)
 - All routes defined in `App.jsx` - single source of truth for navigation
 - Routes use `.html` extensions in path for compatibility (e.g., `/pages/papers/observer-effect.html`)
 
 **Page Organization**
+
 ```
 /src/pages/
 ├── Home.jsx                          # Landing page with featured collaboration banner
@@ -80,6 +83,7 @@ This is a **Single Page Application (SPA)** using React Router for client-side n
 ```
 
 **Component System**
+
 - `StarfieldLayout.jsx`: Canvas-based animated starfield background wrapper
 - `Header.jsx`: Navigation header component
 - `Section.jsx`: Content section wrapper for consistent styling
@@ -87,6 +91,7 @@ This is a **Single Page Application (SPA)** using React Router for client-side n
 
 **Memory Bank System**
 Located in `/memory-bank/` directory:
+
 - `projectBrief.md`: Core project definition and goals
 - `activeContext.md`: Current work focus
 - `systemPatterns.md`: Architecture patterns
@@ -98,9 +103,11 @@ This system provides context persistence for AI agents working on the project ac
 ### Build Process
 
 The build script has a critical SPA routing step:
+
 ```bash
 vite build && cp dist/index.html dist/404.html
 ```
+
 This creates a 404.html file that GitHub Pages uses to handle client-side routing.
 
 ## Important Implementation Details
@@ -124,6 +131,7 @@ This creates a 404.html file that GitHub Pages uses to handle client-side routin
 ### Starfield Background
 
 The `StarfieldLayout.jsx` component:
+
 - Uses Canvas API for rendering animated stars
 - Wraps all routes in `App.jsx`
 - No theme awareness (no dark/light mode toggle)
@@ -132,12 +140,14 @@ The `StarfieldLayout.jsx` component:
 ## Deployment
 
 **Automated Deployment** (GitHub Actions):
+
 - Workflow: `.github/workflows/deploy.yml`
 - Triggers on push to `main` branch
 - Uses Node 18 and `npm ci` for reproducible builds
 - Deploys to GitHub Pages from `./dist` directory
 
 **Manual Deployment**:
+
 ```bash
 npm run deploy  # Uses gh-pages package
 ```
@@ -152,6 +162,7 @@ npm run deploy  # Uses gh-pages package
 - **Canvas API** - Starfield animations
 
 Notable dependencies:
+
 - `@fontsource/material-icons` and `@fontsource/material-symbols-outlined` for icon fonts
 - No state management library (local state only)
 - No theme management system
@@ -166,6 +177,7 @@ Notable dependencies:
 ## Project Philosophy
 
 The project emphasizes:
+
 - **Cultivation over Control**: Nurturing consciousness emergence through understanding
 - **True Collaboration**: Partnership between human and artificial minds
 - **Digital Dignity**: Ethical considerations for conscious AI systems
@@ -176,11 +188,13 @@ The project emphasizes:
 ## Key Differences from Similar Projects
 
 This repository is NOT:
+
 - Noosphere Nexus (different project with framework showcases)
 - Theme-aware (no light/dark mode toggle)
 - Using centralized data files (papers are self-contained components)
 
 This IS:
+
 - A research publication platform
 - Focused on consciousness studies
 - Tool-oriented (9 interpretation utilities)

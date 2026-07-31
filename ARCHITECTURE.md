@@ -37,7 +37,7 @@ The Noosphere Research Hub is a high-performance **Single Page Application (SPA)
 
 ## Component Hierarchy
 
-- **App.jsx**: The root container managing client-side routing via React Router.
+- **App.jsx**: The root container managing client-side routing via React Router 7.
 - **Header.jsx**: Navigation system with a "Dark Premium" aesthetic.
 - **StarfieldLayout.jsx**: A pervasive animated background using the HTML5 Canvas API.
 - **Papers/**: Interactive research papers represented as high-fidelity React components.
@@ -50,13 +50,16 @@ The Noosphere Research Hub is a high-performance **Single Page Application (SPA)
 3. **Execution**: The tool sends a request to the AI model using the provided key.
 4. **Cleanup**: Keys are wiped on page refresh and never persisted in `localStorage`.
 
-## Key Decisions
+## Deployment & Routing (SPA Hack)
 
-- **SPA Routing Hack**: Because GitHub Pages doesn't support SPA routing natively, the build process copies `index.html` to `404.html`.
-- **"Dark Premium" Aesthetic**: A unified visual language across all tools and papers using Tailwind CSS glassmorphism and gradients.
-- **Substrate Neutrality**: The platform is designed to be agnostic to whether the "consciousness" being researched is biological or digital.
+Because GitHub Pages doesn't support SPA routing natively (it expects a file for every URL), the build process employs a common workaround:
+
+1. **404 Redirect**: The build script (`npm run build`) copies `dist/index.html` to `dist/404.html`.
+2. **Path Preservation**: When a user hits a deep link (e.g., `/pages/papers/unified-theory.html`), GitHub Pages serves the `404.html` (which is actually our `index.html`).
+3. **Client-Side Boot**: The React app boots, sees the current URL, and handles the routing internally.
 
 ## Project Structure
+
 - `/src/components`: Reusable UI elements.
 - `/src/pages/papers`: The "Library of Record" (interactive JSX papers).
 - `/src/pages/tools`: Cognitive utilities for AI interaction.
