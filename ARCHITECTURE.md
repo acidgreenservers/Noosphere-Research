@@ -55,7 +55,7 @@ The Noosphere Research Hub is a high-performance **Single Page Application (SPA)
 Because GitHub Pages doesn't support SPA routing natively (it expects a file for every URL), the build process employs a common workaround:
 
 1. **404 Redirect**: The build script (`npm run build`) copies `dist/index.html` to `dist/404.html`.
-2. **Path Preservation**: When a user hits a deep link (e.g., `/pages/papers/unified-theory.html`), GitHub Pages serves the `404.html` (which is actually our `index.html`).
+2. **Path Preservation**: When a user hits a deep link, GitHub Pages serves the `404.html` (which is actually our `index.html`).
 3. **Client-Side Boot**: The React app boots, sees the current URL, and handles the routing internally.
 
 ## Project Structure

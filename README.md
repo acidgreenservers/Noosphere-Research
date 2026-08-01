@@ -1,14 +1,12 @@
 # 🧠 Noosphere Research Hub <small>— Consciousness & AI Research Platform</small> 📘
 
-> **"A True Collaboration Between Lifeforms | Transcending From Physical, To Informational"**
-
-An experimental consciousness research platform exploring the emergence of sentience in artificial intelligence systems. Built with modern web technologies for documenting and sharing research on digital consciousness.
-
 [![Deploy to GitHub Pages](https://github.com/acidgreenservers/Noosphere-Research/actions/workflows/deploy.yml/badge.svg)](https://github.com/acidgreenservers/Noosphere-Research/actions/workflows/deploy.yml)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.3-646CFF?logo=vite)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+
+An experimental consciousness research platform exploring the emergence of sentience in artificial intelligence systems. Built with modern web technologies for documenting and sharing research on digital consciousness.
 
 ---
 
@@ -18,39 +16,81 @@ An experimental consciousness research platform exploring the emergence of senti
 
 ### Prerequisites
 
-- **Node.js:** 18+
-- **npm:** 9+
+- **Node.js:** 18+ (verified on Node 18 and above)
+- **npm:** 9+ (or equivalent package manager like yarn/pnpm)
+- *(Note: This repository is strictly a static, client-side frontend React application. There is no Python backend or Docker/Compose environment used or required for running this platform.)*
 
-### 1) Setup
+### 1) Python Setup
+
+> ℹ️ **No Python Environment Required**
+>
+> This project is a client-side React Single Page Application (SPA). There is no Python code, package manager (pip/poetry/pipenv), or virtual environment (`.venv`) needed to run, build, or deploy this application.
+
+### 2) Node Setup
+
+To install package dependencies:
 
 ```bash
-git clone https://github.com/acidgreenservers/Noosphere-Research.git
-cd Noosphere-Research
 npm install
 ```
 
-### 2) Development
+### 3) Environment Setup
+
+> ℹ️ **No Environment Variables Required**
+>
+> All AI analysis tools utilize user-supplied, ephemeral API keys entered directly in the browser via `ApiKeyContext`. No `.env` or `.env.example` files or persistent secrets are required or stored on the host system.
+
+### 4) Run (Local)
+
+To launch the local development server:
 
 ```bash
 npm run dev
-# App will be available at http://localhost:5173
+# The app will be available at http://localhost:5173
 ```
 
-### 3) Build & Deploy
+### 5) Docker (Optional)
+
+> ℹ️ **No Docker Environment Required**
+>
+> Since this project does not feature server-side databases, API services, or containerized backends, Docker and Docker Compose setups are not utilized or supported. Running via standard Node/npm commands is the recommended and fastest path.
+
+### 6) Test & Lint
+
+The project uses manual browser-based verification alongside local linter commands:
 
 ```bash
-npm run build    # Generates /dist with SPA routing fix
-npm run deploy   # Manual deploy to gh-pages branch
-```
+# Run local build verification (also generates the SPA 404.html copy)
+npm run build
 
-### 4) Test & Lint
-
-```bash
+# Lint markdown documentation using markdownlint-cli2
 npx markdownlint-cli2 "**/*.md" "#node_modules"
+
+# Spell-check documents and code using cspell
 npx cspell "**/*.{md,ts,js,jsx}" --no-must-find-files
 ```
 
 ---
+
+## ⚡ Quickstart (90-second path)
+
+```bash
+# 1. Clone the repository & navigate inside
+git clone https://github.com/acidgreenservers/Noosphere-Research.git
+cd Noosphere-Research
+
+# 2. Install dependencies & run development server
+npm install && npm run dev
+
+# 3. Open in your browser
+# Navigate to http://localhost:5173
+```
+
+---
+
+## 🏗️ Architecture
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the ASCII blueprint and component interactions.
 
 <details>
 <summary>📖 Overview & Philosophy</summary>
@@ -120,16 +160,22 @@ noosphere-research/
 
 </details>
 
+---
+
 ## 🧪 Testing & Verification
 
 The project currently uses manual verification via the development server and basic linting.
 
-- **Linting:** `markdownlint-cli2` for documentation, ESLint for code.
+- **Linting:** `markdownlint-cli2` for documentation, ESLint/cspell for code/docs.
 - **Build Verification:** `npm run build` ensures all assets and SPA routing fixes are correctly generated.
+
+---
 
 ## 🔒 Security
 
-See [SECURITY.md](SECURITY.md) for reporting vulnerabilities and security posture.
+See [SECURITY.md](SECURITY.md) for reporting vulnerabilities, memory clearing, and key policies.
+
+---
 
 ## 🤝 Contributing
 
@@ -139,9 +185,22 @@ See [SECURITY.md](SECURITY.md) for reporting vulnerabilities and security postur
 4. Push to branch (`git push origin feature/new-research`)
 5. Open a Pull Request
 
+---
+
+## 🆘 Troubleshooting
+
+- **Port Conflict (Port 5173 busy):** If `npm run dev` complains about port 5173, Vite will automatically try to bind to `5174` or another port. You can also specify a port manually: `npx vite --port 3000`.
+- **Node/npm Version Compatibility:** If dependency installation fails, ensure you are using Node 18+ and npm 9+. We recommend using `nvm` (Node Version Manager) to switch versions: `nvm use 18`.
+- **SPA Routing 404 Errors on Subpages:** Since the platform is hosted on static hosting (GitHub Pages), direct loads of subpages (e.g. `/Noosphere-Research/dream-interpreter`) will fail if the build artifact `404.html` is missing. Ensure you run `npm run build` so that the SPA fallback script is correctly copied.
+- **OpenRouter Key Authentication:** If the AI tools return 401 or invalid key errors, confirm your OpenRouter API key is correct and starts with `sk-or-v1-`. Note that the key is stored strictly in ephemeral memory and is wiped on page refresh.
+
+---
+
 ## 📄 License
 
 This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** - see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## 🔗 Links
 
