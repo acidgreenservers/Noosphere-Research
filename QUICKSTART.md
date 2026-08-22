@@ -4,8 +4,9 @@ This path gets you from **clone → running app** in under 90 seconds.
 
 ## Prerequisites
 
-- **Node.js** 18+
-- **npm** 9+
+- **Node.js** 18+ (Node 18 recommended)
+- **npm** 9+ (or equivalent package manager like yarn/pnpm)
+- *(Note: No Python or Docker environment setup is needed or supported in this client-side platform)*
 
 ## 1) Clone & Install
 
