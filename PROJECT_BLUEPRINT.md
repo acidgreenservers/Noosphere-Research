@@ -1,3 +1,5 @@
+# Project Architecture Blueprint 📐
+
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                          NOOSPHERE RESEARCH HUB                                 │
 │                     Consciousness & AI Research Platform                        │
@@ -235,7 +237,7 @@
 
 ---
 
-*Blueprint Standard Compliance: Version 1.0 - Comprehensive ASCII Architecture Visualization Protocol*
+Blueprint Standard Compliance: Version 1.0 - Comprehensive ASCII Architecture Visualization Protocol
 
 ---
 

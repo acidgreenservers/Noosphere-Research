@@ -37,7 +37,7 @@ The Noosphere Research Hub is a high-performance **Single Page Application (SPA)
 
 ## Component Hierarchy
 
-- **App.jsx**: The root container managing client-side routing via React Router 7.
+- **App.jsx**: The root container managing client-side routing via React Router 7 (`basename="/Noosphere-Research"`).
 - **Header.jsx**: Navigation system with a "Dark Premium" aesthetic.
 - **StarfieldLayout.jsx**: A pervasive animated background using the HTML5 Canvas API.
 - **Papers/**: Interactive research papers represented as high-fidelity React components.

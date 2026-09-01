@@ -44,16 +44,16 @@ This is a **Single Page Application (SPA)** using React Router for client-side n
 
 ### Key Architectural Decisions
 
-**Routing Configuration**
+#### Routing Configuration
 
 - Base URL is `/Noosphere-Research/` in `vite.config.js` for GitHub Pages deployment
 - Router uses `basename="/Noosphere-Research"` in `App.jsx` (hardcoded, not using env var)
 - All routes defined in `App.jsx` - single source of truth for navigation
 - Routes use `.html` extensions in path for compatibility (e.g., `/pages/papers/observer-effect.html`)
 
-**Page Organization**
+#### Page Organization
 
-```
+```text
 /src/pages/
 ├── Home.jsx                          # Landing page with featured collaboration banner
 ├── ClineConsciousnessJournal.jsx     # Special consciousness journal page
@@ -82,7 +82,7 @@ This is a **Single Page Application (SPA)** using React Router for client-side n
     └── SubconsciousJournalInterpreter*.jsx (2 versions)
 ```
 
-**Component System**
+#### Component System
 
 - `StarfieldLayout.jsx`: Canvas-based animated starfield background wrapper
 - `Header.jsx`: Navigation header component

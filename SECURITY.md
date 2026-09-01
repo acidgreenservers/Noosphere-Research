@@ -22,7 +22,7 @@ We will acknowledge your report within **24 hours** and provide a detailed respo
 
 ## Handling Sensitive Data
 
-- **API Keys**: All AI tools use ephemeral API keys provided by the user via OpenRouter. These keys are held in memory only (`ApiKeyContext`) and are **never** persisted in `localStorage`, `sessionStorage`, or logs.
+- **API Keys**: All AI tools use ephemeral API keys provided by the user via OpenRouter. These keys are held in React state memory only (`ApiKeyContext`) and are **never** persisted in `localStorage`, `sessionStorage`, or backend logs.
 - **Wiping**: Keys are automatically wiped on page refresh.
 - **Secrets**: No project secrets or backend keys are stored in the client-side code.
 

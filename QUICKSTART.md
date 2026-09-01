@@ -1,5 +1,7 @@
 # Quickstart ⚡
 
+> **Fastest Path:** From clone to running app in under 90 seconds.
+
 This path gets you from **clone → running app** in under 90 seconds.
 
 ## Prerequisites
