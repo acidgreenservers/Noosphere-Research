@@ -4,6 +4,14 @@ Critical learnings and discoveries made during documentation passes.
 
 ---
 
+## 2026-09-01 - [Markdown Linting Standard & SPA Routing Verification Pass]
+
+**Observation:** Executing `markdownlint-cli2` across all documentation files identified lint violations in `CLAUDE.md`, `PROJECT_BLUEPRINT.md`, and `ROADMAP.md` (specifically MD036 emphasis-as-heading, MD040 missing fenced code language, MD041 missing first-line h1 header, MD024 duplicate headings, and MD051 broken link fragments).
+
+**Learning:** Keeping repository-wide documentation clean and compliant requires active lint checks against `.markdownlint.json` rules. Standardizing headings and link anchors prevents silent breakage in doc renderers and static site generators.
+
+**Action:** Resolved all markdown lint issues in `CLAUDE.md`, `PROJECT_BLUEPRINT.md`, and `ROADMAP.md`. Verified zero errors output from `npx markdownlint-cli2 "**/*.md" "#node_modules"` and verified `npm run build` execution.
+
 ## 2026-07-02 - [Scribe Full Technical Surface & Command Pass]
 
 **Observation:** Analyzed the repository's artifacts and confirmed that the project is purely a client-side Single Page Application (SPA) built using React 18, Vite 5, React Router 7, and Tailwind CSS 3. There is no Python backend, virtual environments, Docker files, or Docker Compose setups. Build command is `npm run build` which generates static assets in `dist/` and copies `index.html` to `404.html` to support client-side SPA routing on GitHub Pages.

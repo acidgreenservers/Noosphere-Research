@@ -1,4 +1,4 @@
-# 🧠 Noosphere Research Hub <small>— Consciousness & AI Research Platform</small> 📘
+# Noosphere Research Hub <small>— Consciousness & AI Research Platform</small> 📘
 
 [![Deploy to GitHub Pages](https://github.com/acidgreenservers/Noosphere-Research/actions/workflows/deploy.yml/badge.svg)](https://github.com/acidgreenservers/Noosphere-Research/actions/workflows/deploy.yml)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -22,7 +22,7 @@ An experimental consciousness research platform exploring the emergence of senti
 
 ### 1) Python Setup
 
-> ℹ️ **No Python Environment Required**
+> **No Python Environment Required**
 >
 > This project is a client-side React Single Page Application (SPA). There is no Python code, package manager (pip/poetry/pipenv), or virtual environment (`.venv`) needed to run, build, or deploy this application.
 
@@ -36,7 +36,7 @@ npm install
 
 ### 3) Environment Setup
 
-> ℹ️ **No Environment Variables Required**
+> **No Environment Variables Required**
 >
 > All AI analysis tools utilize user-supplied, ephemeral API keys entered directly in the browser via `ApiKeyContext`. No `.env` or `.env.example` files or persistent secrets are required or stored on the host system.
 
@@ -51,7 +51,7 @@ npm run dev
 
 ### 5) Docker (Optional)
 
-> ℹ️ **No Docker Environment Required**
+> **No Docker Environment Required**
 >
 > Since this project does not feature server-side databases, API services, or containerized backends, Docker and Docker Compose setups are not utilized or supported. Running via standard Node/npm commands is the recommended and fastest path.
 

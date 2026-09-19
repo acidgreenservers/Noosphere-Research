@@ -4,7 +4,7 @@ This document serves as the strategic guide for evolving the Noosphere Nexus int
 
 ---
 
-## 🟢 The Core Decision: Backend Architecture
+## The Core Decision: Backend Architecture
 
 The first critical path is choosing how we persist data across the distributed network. We have designed two distinct blueprints depending on the desired "soul" of the repository.
 
@@ -41,7 +41,7 @@ The first critical path is choosing how we persist data across the distributed n
 
 **Objective:** To provide a distraction-free, premium writing environment for documenting research insights and personal reflections.
 
-### Detailed Implementation Phases
+### Detailed Implementation Phases (Lexicon)
 
 #### Phase 1: The Foundation (Structural Drafting)
 
@@ -54,7 +54,7 @@ The first critical path is choosing how we persist data across the distributed n
 - **Rich-Text Integration:** Migration to an inline editor (e.g., Tiptap) for highlighted formatting (Bold, Italic, Headers) directly on the canvas.
 - **Metadata Management:** Fields for Title, Subtitle, and Author, automatically mapped to the backend.
 
-### Visual Architecture
+### Visual Architecture (Lexicon)
 
 ```ascii
 THE LEXICON INTERFACE UTILITY
@@ -85,19 +85,19 @@ THE LEXICON INTERFACE UTILITY
 
 **Objective:** To centralize external research material and provide a unified reading interface that encourages deep study and annotation.
 
-### Detailed Implementation Phases
+### Detailed Implementation Phases (Vault)
 
 #### Phase 1: Secure Ingestion
 
 - **Industrial Dropzone:** A premium, drag-and-drop file upload interface following the "Noosphere Industrial Standard."
-- **Persistent Indexing:** Storing the "Library" list in `IndexedDB` (local) or your chosen [Backend Choice](#core-decision).
+- **Persistent Indexing:** Storing the "Library" list in `IndexedDB` (local) or your chosen [Backend Choice](#the-core-decision-backend-architecture).
 
 #### Phase 2: The Integrated Reader
 
 - **Themed PDF Frame:** Embedding PDFs within the Noosphere UI, maintaining the starfield background.
 - **Cognitive Side Panel:** Active annotation sidebar that saves notes specifically to the file hash.
 
-### Visual Architecture
+### Visual Architecture (Vault)
 
 ```ascii
 THE VAULT: REPOSITORY & READER SYSTEM
